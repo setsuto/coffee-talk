@@ -1,0 +1,12 @@
+.l-content__width {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+.l-content__width-min {
+  width: 80%;
+  margin: 0 auto;
+  max-width: $contentMinWidth;
+}

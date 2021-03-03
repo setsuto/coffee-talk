@@ -1,0 +1,40 @@
+.u-flex {
+  display: flex;
+  align-items: center;
+}
+
+.u-red {
+  color: #bd1b1b;
+}
+
+.u-br-none {
+  display: block;
+  @include breakpoint-up(phone) {
+    display: none;
+  }
+}
+
+.u-small {
+  width: 100%;
+  @include breakpoint-up(phone) {
+    width: 50%; 
+  }
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+
+
+
+
+

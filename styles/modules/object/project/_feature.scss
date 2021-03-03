@@ -1,0 +1,46 @@
+.feature {
+  .swiper-wrapper {
+    max-width: 600px;
+  }
+
+  a {
+    display: block;
+    border: 1px solid #e5e5e5;
+    padding: 10px ;
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+
+    img {
+      @include absCenter;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+
+    &--title {
+      white-space: pre;
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: $cBlack;
+      padding-top: 5px;
+      letter-spacing: .075em;
+      margin-bottom: .3em;
+      overflow: hidden;
+    }
+
+    &--brand {
+      color: $cBgBlack;
+    }
+
+    &--date {
+      color: $cBgBlack;
+    }
+  }
+}

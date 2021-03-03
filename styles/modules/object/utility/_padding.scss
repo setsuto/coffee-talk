@@ -1,0 +1,26 @@
+// ==================================
+// padding
+// ==================================
+@for $i from 0 through 100 {
+  .u-pt#{$i * 5} {
+    padding-top:#{$i * 5}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .u-pb#{$i * 5} {
+    padding-bottom:#{$i * 5}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .u-pl#{$i * 5} {
+    padding-left:#{$i * 5}px;
+  }
+}
+
+@for $i from 0 through 100 {
+  .u-pr#{$i * 5} {
+    padding-right:#{$i * 5}px;
+  }
+}

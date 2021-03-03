@@ -1,0 +1,139 @@
+.ranking {
+  &__heading {}
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    flex-basis: calc((100% - 3 * 10px) / 2);
+    @include breakpoint-up(phone) {
+      flex-basis: calc((100% - 5 * 10px) / 5);
+    }
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 130%;
+    margin-bottom: 7px;
+
+    img {
+      @include absCenter;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--name {
+      font-weight: normal;
+      padding-top: .5rem;
+      font-size: 1.4rem;
+      color: $cBlack;
+    }
+
+    &--price {
+      padding-top: .5rem;
+      color: $cRed-1;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.ranking .ranking__item:nth-child(1)>a figure:first-child::before {
+  color: #d9b340;
+  ;
+}
+
+.ranking .ranking__item:nth-child(2)>a figure:first-child::before {
+  color: #6f7b83;
+  ;
+}
+
+.ranking .ranking__item:nth-child(3)>a figure:first-child::before {
+  color: #a15326;
+  ;
+}
+
+.ranking .ranking__item>a figure:first-child::before {
+  color: $cBgBlack;
+}
+
+.ranking .ranking__item>a figure:first-child::before {
+  position: absolute;
+  content: '■';
+  font-size: 125px;
+  top: -110px;
+  left: -65px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.ranking .ranking__item:nth-child(1)>a figure:first-child::after {
+  content: '1';
+}
+
+.ranking .ranking__item:nth-child(2)>a figure:first-child::after {
+  content: '2';
+}
+
+.ranking .ranking__item:nth-child(3)>a figure:first-child::after {
+  content: '3';
+}
+
+.ranking .ranking__item:nth-child(4)>a figure:first-child::after {
+  content: '4';
+}
+
+.ranking .ranking__item:nth-child(5)>a figure:first-child::after {
+  content: '5';
+}
+
+.ranking .ranking__item:nth-child(6)>a figure:first-child::after {
+  content: '6';
+}
+
+.ranking .ranking__item:nth-child(7)>a figure:first-child::after {
+  content: '7';
+}
+
+.ranking .ranking__item:nth-child(8)>a figure:first-child::after {
+  content: '8';
+}
+
+.ranking .ranking__item:nth-child(9)>a figure:first-child::after {
+  content: '9';
+}
+
+.ranking .ranking__item:nth-child(10)>a figure:first-child::after {
+  content: '10';
+}
+
+.ranking .ranking__item>a figure:first-child::after {
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  color: $cWhite;
+  z-index: 10;
+}
