@@ -1,0 +1,79 @@
+.top-member {
+  .swiper-container {
+    margin-top: 50px;
+  }
+
+  .swiper-wrapper {
+    max-width: 600px;
+  }
+
+  .swiper-slide {
+    position: relative;
+
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: $cRed-1;
+      border-radius: 9999px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 900;
+      color: $cWhite;
+      font-size: 2rem;
+      content: '\f1b0';
+      z-index: 2;
+    }
+  }
+
+  a {
+    display: block;
+    background: $cWhite;
+    border: 6px dashed $cBgGray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  &__img {
+    background-image: linear-gradient(to right bottom, rgba(25,7,250,0.3), rgba(255,255,255,0.5)),url(../images/star.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+
+    img {
+      @include absCenter;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    background: $cWhite;
+    padding: 1rem;
+
+    &--title {
+      white-space: pre;
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: $cBlack;
+      padding-top: 5px;
+      letter-spacing: .075em;
+      margin-bottom: .3em;
+      overflow: hidden;
+    }
+
+    &--brand {
+      color: $cBlack;
+    }
+
+    &--date {
+      color: $cBlack;
+    }
+  }
+}

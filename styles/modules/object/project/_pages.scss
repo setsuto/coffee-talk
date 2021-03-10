@@ -1,12 +1,14 @@
 .top-main {
-
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 .top-left {
-
+  flex-basis: 70%;
 }
 
 .top-right {
-
+  flex-basis: 28%;
 }

@@ -4,7 +4,7 @@
     .swiper-container {
         position: relative;
         // max-width: 1100px;
-        height: 650px;
+        height: 500px;
         // height: calc(100vh - 110px);
     }
 
@@ -30,6 +30,11 @@
         transform: translate(-50%, -50%);
         z-index: 2;
         text-align: center;
+        border: 1px solid $cGray-2;
+        outline: 2px solid $cGray-2;
+        outline-offset: 4px;
+        border-radius: 6px;
+    
 
         p {
             font-size: 1.6rem;
@@ -37,22 +42,5 @@
             font-weight: 500;
             padding: 20px 10px;
         }
-    }
-}
-
-
-.footer {
-    margin-top: 200px;
-    background-color: $cWhite;
-    height: 50px;
-    width: 100%;
-    bottom: 0px;
-
-    p {
-        font-size: 11px;
-        line-height: 50px;
-        color: $cBlack;
-        text-align: center;
-        letter-spacing: 1.5px;
     }
 }

@@ -1,0 +1,29 @@
+.cafe-menu {
+  &__list {
+    background: $cWhite;
+    padding: 55px 75px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border-radius: 20px;
+  }
+
+  &__item {
+    // flex-basis: calc((100% - 4 *30px) / 4);
+    flex-basis: calc((100% - 3 * 30px) / 4);
+
+    a {
+      position: relative;
+      padding-top: 70%;
+      overflow: hidden;
+      display: block;
+
+      img {
+        @include absCenter;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

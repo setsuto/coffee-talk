@@ -1,0 +1,58 @@
+.tweet {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  &__header {
+    padding: 1rem;
+    position: relative;
+
+    &::before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      background: #DA1725;
+      position: absolute;
+      top: 14px;
+      right: 10px;
+      margin: auto;
+      font-family: "Font Awesome 5 Brands";
+      color: $cWhite;
+      font-size: 2.4rem;
+      content: '\f167';
+      border-radius: 10px;
+    }
+
+    &::after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      background: #1877f2;
+      position: absolute;
+      top: 14px;
+      right: 55px;
+      margin: auto;
+      font-family: "Font Awesome 5 Brands";
+      color: $cWhite;
+      font-size: 2.4rem;
+      content: '\f39e';
+      border-radius: 10px;
+    }
+  }
+
+  &__bg {
+    background-image: linear-gradient(to right bottom, rgba(255, 23, 111, 0.8), rgba(255, 255, 255, 0.5)), url(../images/star.png);
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}

@@ -1,16 +1,15 @@
-.l-footer {
-  padding: 60px 0;
-  display: flex;
-  height: 70px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: $cWhite;
-  br {
-    display: block;
-    @include breakpoint-up(phone) {
-      display: none;
-    }
+.footer {
+  margin-top: 200px;
+  background-color: $cWhite;
+  height: 50px;
+  width: 100%;
+  bottom: 0px;
+
+  p {
+      font-size: 11px;
+      line-height: 50px;
+      color: $cBlack;
+      text-align: center;
+      letter-spacing: 1.5px;
   }
 }
-

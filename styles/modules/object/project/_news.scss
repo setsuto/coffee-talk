@@ -1,7 +1,6 @@
 .news {
-
-  // background: $cWhite;
   &__container {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -12,7 +11,7 @@
   }
 
   &__menu {
-    flex-basis: 65%;
+    width: 100%;
   }
 
   &__list {
@@ -26,8 +25,8 @@
 
   &__item {
     position: relative;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -94,129 +93,6 @@
       a {
         color: #2b7bb9;
       }
-    }
-  }
-
-  &__twitter {
-    flex-basis: 30%;
-    border-radius: 10px;
-    background: $cWhite;
-    border-left: solid 6px $cRed-1;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
-  }
-
-
-  &__social-icon {
-    display: flex;
-    list-style: none;
-
-    li {
-      margin-left: 10px;
-
-      img {
-        height: 40px;
-        width: 40px;
-        // background: $cWhite;
-      }
-    }
-  }
-}
-
-
-
-.top-blog {
-  margin-top: 50px;
-  // background: $cWhite;
-
-  &__container {}
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-  }
-
-  &__item {
-    flex-basis: calc((100% - 4 * 30px) / 4);
-
-    &--link {
-      figure {
-        position: relative;
-        overflow: hidden;
-        padding-top: 60%;
-
-        img {
-          @include absCenter;
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      h3 {
-        font-size: 1.6rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-      }
-    }
-
-    &--meta {
-      color: $cBlack;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.2rem;
-      // font-weight: bold;
-      margin-top: 15px;
-
-      time {
-        position: relative;
-        padding-right: 16px;
-        font-weight: bold;
-
-        &::before {
-          content: "";
-          position: absolute;
-          background: $cBlack;
-          width: 1px;
-          height: 14px;
-          right: 0;
-          top: calc(50% - 7px);
-        }
-      }
-
-      span {
-        padding: 2px 4px;
-        font-size: 1rem;
-        color: $cWhite;
-        background: $cRed-1;
-      }
-    }
-
-    &--details {
-      color: $cBlack;
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-  }
-
-  &__btn {
-    font-weight: bold;
-    color: $cBlack;
-    position: relative;
-    padding-right: 30px;
-    padding-bottom: 7px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background: $cBlack;
-      width: 100%;
-      height: 1px;
-      left: 0;
-      bottom: 0;
     }
   }
 }

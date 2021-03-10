@@ -1,4 +1,4 @@
-.c-btn {
+.btn {
   position: relative;
   display: inline-block;
   background: $cBlack;
@@ -37,5 +37,24 @@
         transform: none;
       }
     }
+  }
+}
+
+
+.viewBtn {
+  font-weight: bold;
+  color: $cBlack;
+  position: relative;
+  padding-right: 30px;
+  padding-bottom: 7px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: $cBlack;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
   }
 }

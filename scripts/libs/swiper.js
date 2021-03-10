@@ -11,14 +11,14 @@ var slide1 = new Swiper('#heroSlider', {
   },
 });
 
-var slide2 = new Swiper('#featureSlider', {
+var slide2 = new Swiper('#top-memberSlider', {
   // initialSlide: 1,
   // centeredSlides: true,
   loop: true,
   grabCursor: true,
   effect: 'slide',
   slidesPerView: 2,
-  spaceBetween: 20,
+  spaceBetween: 10,
   speed: 1000,
   breakpoints: {
     600: {
