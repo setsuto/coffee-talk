@@ -1,28 +1,66 @@
 .cafe-menu {
   &__list {
-    background: $cWhite;
-    padding: 55px 75px;
+    
+    padding: 30px;
+    background: $cOrange;
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
     list-style: none;
-    border-radius: 20px;
+    
   }
 
   &__item {
-    // flex-basis: calc((100% - 4 *30px) / 4);
-    flex-basis: calc((100% - 3 * 30px) / 4);
+    flex-basis: calc((100% - 3 * 20px) / 4);
+    max-width: calc((100% - 3 * 20px) / 4);
+  }
 
-    a {
-      position: relative;
-      padding-top: 70%;
-      overflow: hidden;
+  &__link {
+    display: block;
+    color: $cBlack;
+    background: $cWhite;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: $shadow-1;
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 70%;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 16px;
+
+    img {
+      @include absCenter;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+    &--name {
+      font-size: 1.4rem;
       display: block;
-
-      img {
-        @include absCenter;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
+      margin-bottom: 10px;
+    }
+    &--price {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      &::after {
+        content:"\f35a";
+        font-size: 1.4rem;
+        font-family: 'Font Awesome 5 Pro';
+        color: $cRed-1;
+        padding-left: .5rem;
       }
     }
   }

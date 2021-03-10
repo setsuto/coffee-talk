@@ -57,7 +57,7 @@
     background: $cWhite;
     padding: 1rem;
 
-    &--title {
+    &--name {
       white-space: pre;
       font-size: 1.4rem;
       font-weight: normal;
@@ -68,12 +68,18 @@
       overflow: hidden;
     }
 
-    &--brand {
+    &--size {
       color: $cBlack;
     }
 
-    &--date {
+    &--shift {
       color: $cBlack;
+
+      &::before {
+        content: "\f017";
+        font-family: 'Font Awesome 5 Pro';
+        padding-right: .5rem;
+      }
     }
   }
 }

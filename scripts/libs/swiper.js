@@ -2,13 +2,18 @@ var slide1 = new Swiper('#heroSlider', {
   // initialSlide: 1,
   loop: true,
   grabCursor: true,
-  effect: 'fade',
-  // centeredSlides: true,
+  effect: 'coverflow',
+  centeredSlides: true,
   slidesPerView: 1,
   speed: 1000,
-  autoplay: {
-    delay: 3000,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+    }
   },
+  // autoplay: {
+  //   delay: 6000,
+  // },
 });
 
 var slide2 = new Swiper('#top-memberSlider', {
@@ -33,8 +38,6 @@ var slide2 = new Swiper('#top-memberSlider', {
   },
 });
 
-
-
 var galleryThumbs = new Swiper('#gallery-thumbs', {
   spaceBetween: 10,
   slidesPerView: 5,
@@ -53,5 +56,3 @@ var galleryTop = new Swiper('#gallery-top', {
     swiper: galleryThumbs
   }
 });
-
-

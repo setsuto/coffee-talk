@@ -1,17 +1,18 @@
 .hero {
-    // background: $cWhite;
-    margin: 0 auto;
+    padding: 30px 0;
+    overflow: hidden;
+
     .swiper-container {
+        overflow: visible !important;
         position: relative;
-        // max-width: 1100px;
-        height: 500px;
-        // height: calc(100vh - 110px);
+
     }
 
-
     .swiper-slide {
+        box-shadow: $shadow-1;
+        height: 500px;
         width: 100%;
-        height: 100%;
+        overflow: hidden;
 
         img {
             object-fit: cover;
@@ -20,7 +21,9 @@
         }
     }
 
-    &__text-top {
+    &__text {
+        font-family: serif;
+        font-weight: bold;
         padding: 10px;
         background: rgba(255, 255, 255, 0.5);
         color: $cBlack;
@@ -34,7 +37,6 @@
         outline: 2px solid $cGray-2;
         outline-offset: 4px;
         border-radius: 6px;
-    
 
         p {
             font-size: 1.6rem;

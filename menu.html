@@ -34,82 +34,134 @@
       </div>
     </header>
 
-
-    <section class="cafe-menu l-content__width">
-      <div class="section-heading">
-        <h1>FOOD MENU</h1>
-        <p>お食事</p>
-      </div>
-      <div class="left">
-
-        <nav class="header__menu">
-          <ul class="header__list tab__label">
-            <li class="header__item">
-              <a href="index.html" data-id="tab__burger" class="active header__link nav__link">ハンバーガー</a>
-            </li>
-            <li class="header__item">
-              <a href="index.html" data-id="tab__drink" class="header__link nav__link">ドリンク</a>
-            </li>
-            <li class="header__item">
-              <a href="index.html" data-id="tab__dessert" class="header__link nav__link">デザート</a>
-            </li>
-            <li class="header__item">
-              <a href="index.html" data-id="tab__other" class="header__link nav__link">その他</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="tab__content active" id="tab__burger">
-          <div class="l-content_widt">
-            <ul class="cafe-menu__list">
-              <li class="cafe-menu__item">
-                <a href="">
-                  <img src="./images/burger_1.png" alt="">
-                </a>
-              </li>
-              <li class="cafe-menu__item">
-                <a href="">
-                  <img src="./images/burger_2.png" alt="">
-                </a>
-              </li>
-              <li class="cafe-menu__item">
-                <a href="">
-                  <img src="./images/burger_3.png" alt="">
-                </a>
-              </li>
-              <li class="cafe-menu__item">
-                <a href="">
-                  <img src="./images/burger_4.png" alt="">
-                </a>
-              </li>
-            </ul>
+    <main class="main l-content__width">
+      <article class="main--left">
+        <section class="cafe-menu l-content__width">
+          <div class="section-heading">
+            <h1>FOOD MENU</h1>
+            <p>お食事</p>
           </div>
-        </div>
-        <div class="tab__content" id="tab__drink">
-          <div class="u-text-center">
-            <img src="./images/menu.jpg" alt="" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
+          <div class="left">
+
+            <nav class="header__menu">
+              <ul class="header__list tab__label">
+                <li class="header__item">
+                  <a href="index.html" data-id="tab__burger" class="active header__link nav__link">ハンバーガー</a>
+                </li>
+                <li class="header__item">
+                  <a href="index.html" data-id="tab__drink" class="header__link nav__link">ドリンク</a>
+                </li>
+                <li class="header__item">
+                  <a href="index.html" data-id="tab__dessert" class="header__link nav__link">デザート</a>
+                </li>
+                <li class="header__item">
+                  <a href="index.html" data-id="tab__other" class="header__link nav__link">その他</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="tab__content active" id="tab__burger">
+              <ul class="cafe-menu__list">
+                <li class="cafe-menu__item">
+                  <a href="#" class="cafe-menu__link">
+                    <figure class="cafe-menu__img">
+                      <img src="./images/burger_2.png" alt="">
+                    </figure>
+                    <div class="cafe-menu__details">
+                      <h3 class="cafe-menu__details--name">ル・ビッグ・マック</h3>
+                      <p class="cafe-menu__details--price">¥500</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="cafe-menu__item">
+                  <a href="#" class="cafe-menu__link">
+                    <figure class="cafe-menu__img">
+                      <img src="./images/burger_3.png" alt="">
+                    </figure>
+                    <div class="cafe-menu__details">
+                      <h3 class="cafe-menu__details--name">チーズ・ロワイアル</h3>
+                      <p class="cafe-menu__details--price">¥400</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="cafe-menu__item">
+                  <a href="#" class="cafe-menu__link">
+                    <figure class="cafe-menu__img">
+                      <img src="./images/burger_2.png" alt="">
+                    </figure>
+                    <div class="cafe-menu__details">
+                      <h3 class="cafe-menu__details--name">ル・ビッグ・マック</h3>
+                      <p class="cafe-menu__details--price">¥500</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="cafe-menu__item">
+                  <a href="#" class="cafe-menu__link">
+                    <figure class="cafe-menu__img">
+                      <img src="./images/burger_3.png" alt="">
+                    </figure>
+                    <div class="cafe-menu__details">
+                      <h3 class="cafe-menu__details--name">チーズ・ロワイヤル</h3>
+                      <p class="cafe-menu__details--price">¥400</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab__content" id="tab__drink">
+              <div class="u-text-center">
+                <img src="./images/menu.jpg" alt=""
+                  style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;">
+              </div>
+            </div>
+            <div class="tab__content" id="tab__dessert">
+              3
+            </div>
+            <div class="tab__content" id="tab__other">
+              4
+            </div>
           </div>
-        </div>
-        <div class="tab__content" id="tab__dessert">
-          3
-        </div>
-        <div class="tab__content" id="tab__other">
-          4
-        </div>
+        </section>
+      </article>
 
+      <aside class="main--right">
+        <section class="banner">
+          <a href=""><img src="./images/banner1.png" alt="" class=""></a>
+          <a href=""><img src="./images/banner2.png" alt="" class="u-mt20"></a>
+        </section>
 
-      </div>
-      <div class="right">
-        <!-- <img src="./images/bob.jpg.png" alt="" style="height: 900px; width: 500px;"> -->
-      </div>
-    </section>
+        <section class="mailmaga u-mt30">
+          <div class="mailmaga__details">
+            <h3>メルマガ登録</h3>
+            <p>空メールを送るだけ！<br>最新情報やお得なクーポン等を配信中！お気軽にご登録ください！</p>
+          </div>
+          <form class="mailmaga__form">
+            <input type="email" placeholder="asdf@example.com">
+            <input type="submit" value="登録">
+          </form>
+        </section>
+
+        <section class="tweet u-mt30">
+          <div class="tweet__header">
+            <div class="tweet__bg"></div>
+            <img class="tweet__icon" src="./images/logo.png" alt="">
+          </div>
+          <div class="tweet">
+            <a class="twitter-timeline" data-width="100%" data-height="455"
+              href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </section>
+      </aside>
+    </main>
+
     <footer class="footer">
       <p>©&nbsp;l2021&nbsp;lS.TANABE</p>
     </footer>
   </div>
 
+  <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
   <script src="./scripts/vendors/swiper.min.js"></script>
-  <script src="./scripts/vendors/pace.js"></script>
   <script src="./scripts/libs/tabMenu.js"></script>
 </body>
 
