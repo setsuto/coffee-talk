@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COFFEE-TALK</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <link rel='stylesheet'
+    href="https://fonts.googleapis.com/css2?family=Poppins%3Awght%40400%3B500%3B700&#038;display=swap">
+  <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+
+  <div id="app">
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__logo">
+          <a href="index.html"><img src="./images/logo.png" alt=""></a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
+            <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
+            <li class="header__item"><a class="header__link" href="">CAST</a></li>
+            <li class="header__item"><a class="header__link" href="">CONTACT</a></li>
+            <li class="header__item"><a class="header__link" href="">ACCESS</a></li>
+          </ul>
+        </nav>
+        <ul></ul>
+      </div>
+    </header>
+
+    <div class="l-content__width">
+      <section class="menu">
+        <!-- <div class="section-heading">
+          <h1>FOOD MENU</h1>
+          <p>お食事</p>
+        </div> -->
+        <div class="menu--inner">
+
+          <nav class="menu__nav">
+            <div class="menu__inner--nav">
+              <ul class="menu__list--nav tab__label">
+                <li class="menu__item--nav">
+                  <button class="menu__button--nav active" data-id="tab__food">FOOD</button>
+                </li>
+                <li class="menu__item--nav">
+                  <button class="menu__button--nav" data-id="tab__drink">DRINK</button>
+                </li>
+                <li class="menu__item--nav">
+                  <button class="menu__button--nav" data-id="tab__sweet">SWEET</button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="tab__content active" id="tab__food">
+            <h2 class="section-subHeading bg-food u-pt100 u-pb100">Hamburger</h2>
+            <nav class="menu__table">
+              <ul class="menu__list--table">
+                <li class="menu__item--table">
+                  <a href="#">
+                    <figure>
+                      <img src="./images/burger_2.png" alt="">
+                    </figure>
+                    <div class="menu__details">
+                      <h3 class="menu__name--details">ル・ビッグ・マック</h3>
+                      <p class="menu__price--details">¥500</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item--table">
+                  <a href="#">
+                    <figure>
+                      <img src="./images/burger_3.png" alt="">
+                    </figure>
+                    <div class="menu__details">
+                      <h3 class="menu__name--details">チーズ・ロワイヤル</h3>
+                      <p class="menu__price--details">¥500</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item--table">
+                  <a href="#">
+                    <figure>
+                      <img src="./images/burger_2.png" alt="">
+                    </figure>
+                    <div class="menu__details">
+                      <h3 class="menu__name--details">ル・ビッグ・マック</h3>
+                      <p class="menu__price--details">¥500</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item--table">
+                  <a href="#">
+                    <figure>
+                      <img src="./images/burger_3.png" alt="">
+                    </figure>
+                    <div class="menu__details">
+                      <h3 class="menu__name--details">チーズ・ロワイヤル</h3>
+                      <p class="menu__price--details">¥500</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="tab__content" id="tab__drink">
+            <h2 class="section-subHeading bg-food u-pt100 u-pb100">Hamburger</h2>
+          </div>
+          <div class="tab__content" id="tab__sweet">
+            3
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <nav class="footer__menu">
+          <ul class="footer__list--menu">
+            <li class="footer__item--menu"><a href="index.html">TOP</a></li>
+            <li class="footer__item--menu"><a href="menu.html">MENU</a></li>
+            <li class="footer__item--menu"><a href="#">CAST</a></li>
+            <li class="footer__item--menu"><a href="#">CONTACT</a></li>
+            <li class="footer__item--menu"><a href="#">ACCESS</a></li>
+          </ul>
+        </nav>
+        <div class="footer__banner">
+          <ul class="footer__list--banner">
+            <li class="footer__item--banner">
+              <figure>
+                <img src="./images/logo.png" alt="">
+              </figure>
+              <p class="footer__title--banner">最新情報やクーポンをアプリで配信中</p>
+              <ul class="app-button">
+                <li class="app-button__appstore">
+                  <a href="#"><img src="./images/apple.png" alt=""></a>
+                </li>
+                <li class="app-button__googleplay">
+                  <a href="#"><img src="./images/google.png" alt=""></a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__item--banner">
+              <figure>
+                <img src="./images/uber-eats.svg" alt="">
+              </figure>
+              <p class="footer__title--banner">デリバリーサービスはこちらから</p>
+              <ul class="app-button">
+                <button class="btn slide-bg">今すぐ注文する</button>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="u-text-center u-mt60">©&nbsp;l2021&nbsp;lS.TANABE</p>
+    </footer>
+  </div>
+
+  <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
+  <script src="./scripts/vendors/swiper.min.js"></script>
+  <script src="./scripts/libs/tabMenu.js"></script>
+</body>
+
+</html>

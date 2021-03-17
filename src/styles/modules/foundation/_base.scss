@@ -1,0 +1,110 @@
+html {
+  width: 100%;
+  background-size: contain;
+  font-size: 62.5%;
+  letter-spacing: .07em;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: $cBlack;
+  font-family: "Poppins", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo;
+  line-height: 1.7;
+  font-size: 1.4rem;
+  background-size: cover;
+  background: $cWhite;
+  // background-image: url(../images/star.png);
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: $cBlack;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  line-height: 1.4;
+  color: inherit;
+  margin: 0;
+}
+
+
+button {
+  border: none;
+  background: transparent;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+
+.tab {
+  &__label {
+    li {
+    }
+
+    & li button {
+    }
+  }
+
+  &__content {
+    color: $cBlack;
+    display: none;
+
+    &.active {
+      color: $cWhite;
+      display: block;
+    }
+  }
+}
+
+
+.bg-food {
+  background-image: linear-gradient(to right bottom, rgba(0,0,0,0.6), rgba(255,255,255,0.4)),url(../images/bgfoods.jpg);
+  background-size: cover;
+  background-position: center;
+}

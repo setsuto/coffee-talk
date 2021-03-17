@@ -1,0 +1,133 @@
+.menu {
+  margin-top: 30px;
+  &__nav {
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    background: $cOrange;
+  }
+
+  &__inner--nav {
+    height: inherit;
+    padding: 0 0 0 40px;
+  }
+
+  &__list--nav {
+    display: inline-table;
+    max-width: 100%;
+    height: inherit;
+    padding-right: 40px;
+  }
+
+  &__item--nav {
+    display: table-cell;
+    height: inherit;
+    white-space: nowrap;
+  }
+
+  &__button--nav {
+    color: $cWhite;
+    cursor: pointer;
+    display: block;
+    height: inherit;
+    padding: 0 16px;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: background-color .1s, opacity .1s, font-size .1s;
+
+    &.active {
+      color: $cWhite;
+      background: $cBlack;
+    }
+
+    &:not(.active):hover {
+      transition: 0.1s;
+    }
+  }
+
+  &__table {}
+
+  &__list--table {
+    padding: 10px;
+    background: $cOrange;
+    list-style: none;
+    @include clearfix;
+
+    @include breakpoint-up(phone) {
+      padding: 50px;
+    }
+  }
+
+  &__item--table {
+    float: left;
+
+    @include breakpoint-down(phone) {
+      width: calc(50% - 10px / 2);
+      margin: 0 10px 10px 0;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    
+    @include breakpoint-up(phone) {
+      width: calc(25% - 150px / 4);
+      margin: 0 50px 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      color: $cBlack;
+      background: $cWhite;
+      border-radius: 6px;
+      padding: 5px;
+      box-shadow: $shadow-1;
+    }
+
+    figure {
+      position: relative;
+      padding-top: 70%;
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 16px;
+
+      img {
+        @include absCenter;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  &__name--details {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__price--details {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+
+    &::after {
+      content: "\f35a";
+      font-size: 1.4rem;
+      font-family: 'Font Awesome 5 Pro';
+      color: $cRed-1;
+      padding-left: .5rem;
+    }
+  }
+}
