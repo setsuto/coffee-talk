@@ -1,13 +1,6 @@
 .news {
-  &__container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-    @include breakpoint-up(tab-port) {
-      flex-direction: row;
-    }
+  width: 100%;
+  &--inner {
   }
 
   &__menu {
@@ -15,20 +8,28 @@
   }
 
   &__list {
-    display: flex;
+    width: 100%;
+    display: inline-block;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    @include breakpoint-up(tab-port) {
+      display: flex;
+    }
   }
 
   &__item {
     width: 100%;
+    margin: 0 20px 20px 0;
     position: relative;
-    margin-bottom: 20px;
     padding-bottom: 20px;
     display: flex;
     align-items: center;
+    @include breakpoint-up(tab-port) {
+      width: calc((100% - 20px) / 2);
+    }
 
-    &:last-child {
-      margin-bottom: 0;
+    &:nth-child(2n) {
+      margin-right: 0;
     }
 
     &::before {
@@ -71,28 +72,35 @@
     align-self: center;
     margin-right: 20px;
     text-align: center;
-    display: block;
+    display: none;
     width: 80px;
     padding: 5px 0;
     font-size: 1rem;
     border-radius: 20px;
     background: $cRed-1;
     font-weight: 500;
-    color: $cWhite;
+    @include breakpoint-up(phone) {
+      display: block;
+    }
+    a {
+      color: $cWhite;
+    }
   }
 
   &__txt {
-    // white-space: pre;
+    width: 100%;
     align-self: center;
     margin-right: auto;
-    color: #2b7bb9;
-  }
+    @include breakpoint-up(tab-port) {
+      width: calc(100% - 210px);
+    }
+  } 
 
   i {
     display: block;
     position: relative;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 10px;
     width: 0;
     height: 0;
     border: 6px solid;
