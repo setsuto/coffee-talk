@@ -104,7 +104,12 @@ ul {
 
 
 .bg-food {
-  background-image: linear-gradient(to right bottom, rgba(0,0,0,0.6), rgba(255,255,255,0.4)),url(../images/bgfoods.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../images/bgfoods.jpg);
   background-size: cover;
   background-position: center;
 }
+// .bg-member {
+//   background-image: linear-gradient(to right bottom, rgba(40,100,52,0.6), rgba(255,255,255,0.4)),url(../images/hero2.jpg);
+//   background-size: cover;
+//   background-position: center;
+// }

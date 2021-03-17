@@ -1,24 +1,30 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 const loadPlugins = require('gulp-load-plugins');
 const $ = loadPlugins();
+const pkg = require('./package.json');
+const conf = pkg["gulp-config"];
+const sizes = conf.sizes;
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
 const server = browserSync.create();
 const isProd = process.env.NODE_ENV === "production";
 
-function images() {
-    return src('./src/images/*')
-        // .pipe($.imageResize({
-        //     width: 100,
-        //     height: 100,
-        //     crop: true,
-        //     upscale: false
-        // }))
-        // .pipe($.rename({
-        //     prefix: 'hello-'
-        // }))
+function images(done) {
+    for(let size of sizes) {
+        let width = size[0];
+        let height = size[1];
+        src('./src/images/icon/favicon.png')
+        .pipe($.imageResize({
+            width: width,
+            height: height,
+            crop: true,
+            upscale: false
+        }))
         .pipe($.imagemin())
-        .pipe(dest('./dist/images'));
+        .pipe($.rename(`favicon-${width}x${height}.png`))
+        .pipe(dest('./dist/images/icon'));
+    }
+    done();
 }
 
 function styles() {
@@ -28,7 +34,7 @@ function styles() {
         .pipe($.postcss([
             autoprefixer({
                 grid: true,
-                // cascde: false
+                cascde: false
             })
         ]))
         .pipe($.if(!isProd, $.sourcemaps.write('.')))

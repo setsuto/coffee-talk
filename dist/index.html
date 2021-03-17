@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/dist/images/icon/favicon-32x32.png">
   <title>COFFEE-TALK</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <link rel='stylesheet'
@@ -66,73 +67,77 @@
       </div>
     </section>
 
+
+
+
     <main class="main l-content__width">
-      <article class="main--left">
+      <article class="main--left u-mt50">
 
 
         <div id="tabMenu">
           <nav class="topics__box">
             <ul class="topics__list">
-              <li class="topics__item" v-on:click="change('A')" v-bind:class="{'active': isActive === 'A'}">
+              <li class="topics__item" v-on:click="change('topic1')" v-bind:class="{'active': isActive === 'topic1'}">
                 <p>
                   <span>お知らせ</span>
                 </p>
               </li>
-              <li class="topics__item" v-on:click="change('B')" v-bind:class="{'active': isActive === 'B'}">
+              <li class="topics__item" v-on:click="change('topic2')" v-bind:class="{'active': isActive === 'topic2'}">
                 <p>
                   <span>キャンペーン</span>
                 </p>
               </li>
-              <li class="topics__item" v-on:click="change('C')" v-bind:class="{'active': isActive === 'C'}">
+              <li class="topics__item" v-on:click="change('topic3')" v-bind:class="{'active': isActive === 'topic3'}">
                 <p>
-                  <span>特集</span>
+                  <span>スタッフ</span>
                 </p>
               </li>
-              <li class="topics__item" v-on:click="change('D')" v-bind:class="{'active': isActive === 'D'}">
+              <li class="topics__item" v-on:click="change('topic4')" v-bind:class="{'active': isActive === 'topic4'}">
                 <p>
-                  <span>ブログ</span>
+                  <span>求人情報</span>
                 </p>
               </li>
             </ul>
 
-            <ul class="article">
-              <li v-if="isActive === 'A'">
-                <section class="news">
-                  <div class="l-content__width">
-                    <div class="news__container">
-                      <nav class="news__menu">
-                        <ul class="news__list">
-                          <li class="news__item">
-                            <a href="#">
-                              <div class="news__date">
-                                <span>2020.02</span>
-                                <strong>02</strong>
-                              </div>
-                              <p class="news__category">
-                                お知らせ
-                              </p>
-                              <p class="news__txt">
-                                緊急事態宣言延長に伴う変則営業時間継続のお知らせ
-                              </p>
-                              <i></i>
-                            </a>
-                          </li>
-                          <li class="news__item">
-                            <a href="#">
-                              <div class="news__date">
-                                <span>2020.02</span>
-                                <strong>02</strong>
-                              </div>
-                              <p class="news__category">
-                                お知らせ
-                              </p>
-                              <p class="news__txt">
-                                緊急事態宣言延長に伴う変則営業時間継続のお知らせ
-                              </p>
-                              <i></i>
-                            </a>
-                          </li>
-                          <!-- <li class="news__item">
+            <div class="topics__article">
+              <ul class="topics__list--article">
+                <li v-if="isActive === 'topic1'" class="topics__item--article">
+                  <section class="news">
+                    <div class="l-content__width">
+                      <div class="news__container">
+                        <nav class="news__menu">
+                          <ul class="news__list">
+                            <li class="news__item">
+                              <a href="#">
+                                <div class="news__date">
+                                  <span>2020.02</span>
+                                  <strong>02</strong>
+                                </div>
+                                <p class="news__category">
+                                  お知らせ
+                                </p>
+                                <p class="news__txt">
+                                  緊急事態宣言延長に伴う変則営業時間継続のお知らせ
+                                </p>
+                                <i></i>
+                              </a>
+                            </li>
+                            <li class="news__item">
+                              <a href="#">
+                                <div class="news__date">
+                                  <span>2020.02</span>
+                                  <strong>02</strong>
+                                </div>
+                                <p class="news__category">
+                                  お知らせ
+                                </p>
+                                <p class="news__txt">
+                                  緊急事態宣言延長に伴う変則営業時間継続のお知らせ
+                                </p>
+                                <i></i>
+                              </a>
+                            </li>
+                            <!-- <li class="news__item">
                             <div class="news__date">
                               <span>2020.03</span>
                               <strong>03</strong>
@@ -173,167 +178,151 @@
                               <i></i>
                             </a>
                           </li> -->
-                        </ul>
-                        <div class="u-mt50">
-                          <a href="#" class="view-btn">all view</a>
+                          </ul>
+                          <div class="u-mt50">
+                            <a href="#" class="view-btn">all view</a>
+                          </div>
+                        </nav>
+                      </div>
+                    </div>
+                  </section>
+                </li>
+                <li v-else-if="isActive === 'topic2'" class="topics__item--article">
+
+                </li>
+                <li v-else-if="isActive === 'topic3'" class="topics__item--article">
+                  <section class="top-member" class="topics__item--article">
+                    <div class="">
+                      <div class="top-member--inner">
+                        <div class="top-member__item">
                         </div>
-                      </nav>
+                        <div class="top-member__item">
+                          <ul class="top-member__list--staff bg-member">
+                            <li class="top-member__item--staff">
+                              <figure>
+                                <img src="./images/tetuya.png" alt="">
+                              </figure>
+                              <div class="top-member__details--staff">
+                                <h4>TETUYA -テツヤ-</h4>
+                                <p>
+                                  好きなスポーツ：アメフト<br>
+                                  趣味：岩盤浴<br>
+                                  一言：いらっしゃいませ。
+                                </p>
+                              </div>
+                            </li>
+                            <li class="top-member__item--staff">
+                              <figure>
+                                <img src="./images/bob.png" alt="">
+                              </figure>
+                              <div class="top-member__details--staff">
+                                <h4>KEVIN -ケビン-</h4>
+                                <p>
+                                  好きな食べ物：ステーキ<br>
+                                  趣味：フットサル<br>
+                                  一言：ナイロビから着ました。ケビンです。
+                                </p>
+                              </div>
+                            </li>
+                            <li class="top-member__item--staff">
+                              <figure>
+                                <img src="./images/twitter_logo.png" alt="">
+                              </figure>
+                              <div class="top-member__details--staff">
+                                <h4>厨房担当</h4>
+                                <p>
+                                  本日のおすすめ：にくじゃが<br>
+                                  一言：今日のサービス料理は牛筋煮込みです。
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="top-member__item">
+                          <div class="top-member__title">
+                            <h2 class="">
+                              today's staff
+                            </h2>
+                            <p>本日の出勤メンバー</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </section>
-              </li>
-              <li v-else-if="isActive === 'B'">ダミーテキスト2</li>
-              <li v-else-if="isActive === 'C'">ダミーテキスト3</li>
-              <li v-else-if="isActive === 'D'">
-                <section class="top-blog">
-                  <div class="l-content__width">
-                    <div class="section-heading">
-                      <h1>mid Staff Blog</h1>
-                      <p>スタッフのほのぼの日記</p>
+                  </section>
+                  <section class="top-blog">
+                    <div class="">
+                      <div class="top-member__title">
+                        <h2 class="">
+                          staff blog
+                        </h2>
+                        <p>スタッフブログ</p>
+                      </div>
+                      <div class="top-blog--inner">
+                        <ul class="top-blog__list">
+                          <li class="top-blog__item">
+                            <a href="#">
+                              <figure class="top-blog__img">
+                                <img src="./images/hero3.jpg" alt="">
+                              </figure>
+                              <div class="top-blog__meta">
+                                <time class="top-blog__time--meta">2020.05/12</time>
+                                <span class="top-blog__name--meta">TAKURO</span>
+                              </div>
+                              <div class="top-blog__details">
+                                <p class="top-blog__txt--details">
+                                  テツさんたちと一緒にサウナ。
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="top-blog__item">
+                            <a href="#">
+                              <figure class="top-blog__img">
+                                <img src="./images/hero3.jpg" alt="">
+                              </figure>
+                              <div class="top-blog__meta">
+                                <time class="top-blog__time--meta">2020.05/12</time>
+                                <span class="top-blog__name--meta">ケビン</span>
+                              </div>
+                              <div class="top-blog__details">
+                                <p class="top-blog__txt--details">
+                                  日本語の勉強中です。
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="top-blog__item">
+                            <a href="#">
+                              <figure class="top-blog__img">
+                                <img src="./images/hero3.jpg" alt="">
+                              </figure>
+                              <div class="top-blog__meta">
+                                <time class="top-blog__time--meta">2020.05/12</time>
+                                <span class="top-blog__name--meta">TAKURO</span>
+                              </div>
+                              <div class="top-blog__details">
+                                <p class="top-blog__txt--details">
+                                  みんなで運動会をしました。
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="top-blog__item u-text-cent">
+                            <a href="#" class="view-btn">all view</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="top-blog__container">
-                      <ul class="top-blog__list">
-                        <li class="top-blog__item">
-                          <a href="#">
-                            <figure class="top-blog__img">
-                              <img src="./images/hero3.jpg" alt="">
-                            </figure>
-                            <div class="top-blog__meta">
-                              <time class="top-blog__meta--time">2020.05/12</time>
-                              <span class="top-blog__meta--name">TAKURO</span>
-                            </div>
-                            <div class="top-blog__details">
-                              <p class="top-blog__details--txt">
-                                テツさんたちと一緒にサウナ。
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                        <li class="top-blog__item">
-                          <a href="#">
-                            <figure class="top-blog__img">
-                              <img src="./images/hero3.jpg" alt="">
-                            </figure>
-                            <div class="top-blog__meta">
-                              <time class="top-blog__meta--time">2020.05/12</time>
-                              <span class="top-blog__meta--name">ケビン</span>
-                            </div>
-                            <div class="top-blog__details">
-                              <p class="top-blog__details--txt">
-                                日本語の勉強中です。
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                        <li class="top-blog__item">
-                          <a href="#">
-                            <figure class="top-blog__img">
-                              <img src="./images/hero3.jpg" alt="">
-                            </figure>
-                            <div class="top-blog__meta">
-                              <time class="top-blog__meta--time">2020.05/12</time>
-                              <span class="top-blog__meta--name">TAKURO</span>
-                            </div>
-                            <div class="top-blog__details">
-                              <p class="top-blog__details--txt">
-                                みんなで運動会をしました。
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                        <li class="top-blog__item">
-                          <a href="#">
-                            <figure class="top-blog__img">
-                              <img src="./images/hero3.jpg" alt="">
-                            </figure>
-                            <div class="top-blog__meta">
-                              <time class="top-blog__meta--time">2020.05/12</time>
-                              <span class="top-blog__meta--name">ケビン</span>
-                            </div>
-                            <div class="top-blog__details">
-                              <p class="top-blog__details--txt">
-                                プレゼントいただきました。
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="u-mt50">
-                      <a href="#" class="view-btn">all view</a>
-                    </div>
-                  </div>
-                </section>
-              </li>
-            </ul>
+                  </section>
+                </li>
+                <li v-else-if="isActive === 'topic4'" class="topics__item--article">
+
+                </li>
+              </ul>
+            </div>
           </nav>
 
         </div>
-
-
-
-
-
-        <section class="top-member u-mt60">
-          <div class="l-content__width">
-            <div class="section-heading">
-              <h1>TODAY's STAFF</h1>
-              <p>本日の出勤メンバー</p>
-            </div>
-            <div class="swiper-container" id="top-memberSlider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="#">
-                    <figure class="top-member__img">
-                      <img src="./images/bob.jpg.png" alt="">
-                    </figure>
-                    <div class="top-member__details">
-                      <h3 class="top-member__details--name">サンチェス(29)</h3>
-                      <span class="top-member__details--size">160/89(E)/57/86</span><br>
-                      <span class="top-member__details--shift">16:00-23:00</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#">
-                    <figure class="top-member__img">
-                      <img src="./images/tetuya.png" alt="">
-                    </figure>
-                    <div class="top-member__details">
-                      <h3 class="top-member__details--name">テツヤ(24)</h3>
-                      <span class="top-member__details--size">160/89(E)/57/86</span><br>
-                      <span class="top-member__details--shift">16:00-23:00</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#">
-                    <figure class="top-member__img">
-                      <img src="./images/bob.jpg.png" alt="">
-                    </figure>
-                    <div class="top-member__details">
-                      <h3 class="top-member__details--name">サンチェス(29)</h3>
-                      <span class="top-member__details--size">160/89(E)/57/86</span><br>
-                      <span class="top-member__details--shift">16:00-23:00</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#">
-                    <figure class="top-member__img">
-                      <img src="./images/tetuya.png" alt="">
-                    </figure>
-                    <div class="top-member__details">
-                      <h3 class="top-member__details--name">テツヤ(24)</h3>
-                      <span class="top-member__details--size">160/89(E)/57/86</span><br>
-                      <span class="top-member__details--shift">16:00-23:00</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </article>
 
       <aside class="main--right">

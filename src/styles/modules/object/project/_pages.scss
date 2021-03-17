@@ -11,10 +11,11 @@
 }
 
 .main--left {
-  flex-basis: 70%;
+  flex-basis: 100%;
 }
 
 .main--right {
+  display: none;
   flex-basis: 25%;
 }
 
@@ -35,14 +36,20 @@
     height: 5rem;
     display: flex;
     flex: 1 0 50%;
+    transition: .1s;
     @include breakpoint-up(phone) {
       flex-basis: calc(100% / 4);
+    }
+
+    &.active {
+      background: $cBlack;
+      color:$cWhite;
     }
 
     &::after {
       position: absolute;
       content: "";
-      border: 1px solid #dadada;
+      border: 1px solid $cGray-2;
       margin-left: -1px;
       margin-top: -1px;
       top: 0;
@@ -65,6 +72,22 @@
         font-weight: 500;
       }
     }
+  }
+
+  &__article {
+
+  }
+  &__list--article {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -1px;
+  }
+  &__item--article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 20px;
+    border: 1px solid #ccc;
   }
 }
 
@@ -90,20 +113,13 @@
 }
 
 .tab_list li.active {
-  background-color: red;
-  border-color: red;
-  color: #fff;
-  cursor: auto;
+
 }
 
 .article {
-  width: 100%;
-  overflow: hidden;
-  margin-top: -1px;
+
 }
 
 .article li {
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ccc;
+
 }

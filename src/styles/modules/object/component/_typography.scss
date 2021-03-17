@@ -1,7 +1,7 @@
 .section-subHeading {
   position: relative;
   color: $cWhite;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 30px;
   text-align: center;
   &::before {
@@ -10,14 +10,6 @@
     font-family: 'Font Awesome 5 Pro';
     margin: 10px;
     color: $cOrange;
-  }
-
-  &:nth-child(2)::before {
-    content: '\f805';
-    font-size: 3rem;
-    font-family: 'Font Awesome 5 Pro';
-    margin: 10px;
-    color: $cRed-1;
   }
 
   &::after {
@@ -43,7 +35,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $cOrange;
+    background: $cBlack;
     width: 100%;
     height: 100%;
     margin: 0 auto;

@@ -30,7 +30,7 @@ const slide2 = new Swiper('#top-memberSlider', {
       slidesPerView: 2,
     },
     1000: {
-      slidesPerView: 4,
+      slidesPerView: 2,
     },
   },
   autoplay: {

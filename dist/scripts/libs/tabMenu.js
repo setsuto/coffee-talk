@@ -18,7 +18,7 @@
 new Vue({
   el: '#tabMenu',
   data: {
-    isActive: 'A'
+    isActive: 'topic3'
   },
   methods: {
     change: function change(num) {

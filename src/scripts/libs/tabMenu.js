@@ -22,7 +22,7 @@
 new Vue({
   el: '#tabMenu',
   data: {
-    isActive: 'A',
+    isActive: 'topic3',
   },
   methods: {
     change(num) {
