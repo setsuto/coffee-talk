@@ -49,10 +49,7 @@
 
   &__list--table {
     padding: 10px;
-    background: $cOrange;
-    list-style: none;
     @include clearfix;
-
     @include breakpoint-up(phone) {
       padding: 50px;
     }

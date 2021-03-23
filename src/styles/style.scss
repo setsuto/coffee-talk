@@ -39,12 +39,13 @@
 // -----------------------------------------------------------------
 
 @import "./modules/object/project/_pages";
-@import "./modules/object/project/_header-menu";
 @import "./modules/object/project/_header-mobileMenu";
 @import "./modules/object/project/_hero";
-@import "./modules/object/project/_news";
-@import "./modules/object/project/_top-blog";
-@import "./modules/object/project/_top-member";
+
+@import "./modules/object/project/_IndexNews";
+@import "./modules/object/project/_IndexStaff";
+@import "./modules/object/project/_IndexIntro";
+
 @import "./modules/object/project/_menu";
 
 // -----------------------------------------------------------------

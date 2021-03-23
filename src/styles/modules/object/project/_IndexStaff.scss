@@ -1,0 +1,134 @@
+.IndexStaff {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @extend .l-content__width;
+    @extend .IndexNews__inner;
+  }
+
+  &__item--left,
+  &__item--right {
+    flex-basis: 48%;
+  }
+
+  &__list {
+    margin: 40px 0 0 0;
+    display: flex;
+
+    &--blog {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &--today {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--blog {
+      width: calc((100% - 20px) / 2);
+      margin: 0 20px 30px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $cRed-1;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        background: $cWhite;
+        border-bottom: 0;
+      }
+
+      &::before {
+        content: " ";
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 100px;
+        height: 100px;
+        background: $cRed-1;
+        z-index: -2;
+      }
+
+      .view-btn {
+        font-size: 1.6rem;
+        @include absCenter;
+      }
+    }
+
+    &--today {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+
+    &--blog {
+      padding-bottom: 60%;
+
+      img {
+        @include absCenter;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--today {
+      box-shadow: $shadow-1;
+      padding: 10px;
+      margin: 0 20px 20px 0;
+      border-radius: 20px;
+      width: 100px;
+      height: 100px;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__details {
+    flex: 1;
+    padding: 5px;
+    border-bottom: 1px dotted $cRed-1;
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__tag {
+    position: relative;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+    &::after {
+      content: "タクロウ";
+      position: absolute;
+      right: 0;
+      padding: 2px 4px;
+      font-size: 1rem;
+      color: $cWhite;
+      background: $cRed-1;
+    }
+  }
+
+  &__txt {
+    color: $cBlack;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

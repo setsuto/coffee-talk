@@ -21,17 +21,17 @@
 
   <div id="app">
     <header class="header">
-      <div class="header__container">
+      <div class="header__inner">
         <h1 class="header__logo">
           <a href="index.html"><img src="./images/logo.png" alt=""></a>
         </h1>
-        <nav class="header__nav">
+        <nav class="header__menu">
           <ul class="header__list">
             <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
             <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
-            <li class="header__item"><a class="header__link" href="">CAST</a></li>
-            <li class="header__item"><a class="header__link" href="">CONTACT</a></li>
-            <li class="header__item"><a class="header__link" href="">ACCESS</a></li>
+            <li class="header__item"><a class="header__link" href="#">CAST</a></li>
+            <li class="header__item"><a class="header__link" href="#">CONTACT</a></li>
+            <li class="header__item"><a class="header__link" href="#">ACCESS</a></li>
           </ul>
         </nav>
         <ul></ul>
@@ -39,30 +39,32 @@
     </header>
 
     <div class="l-content__width">
-      <section class="menu">
-        <!-- <div class="section-heading">
-          <h1>FOOD MENU</h1>
-          <p>お食事</p>
-        </div> -->
-        <div class="menu--inner">
+      <div id="tabMenu" class="menuNav">
+        <div class="menuNav__inner u-mt50">
+          <ul class="menuNav__list menuNav__list--new">
+            <li class="menuNav__item" v-on:click="change('tab1')" v-bind:class="{'active': isActive === 'tab1'}">
+              <p class="menuNav__title">
+                <span>FOOD</span>
+              </p>
+            </li>
+            <li class="menuNav__item" v-on:click="change('tab2')" v-bind:class="{'active': isActive === 'tab2'}">
+              <p class="menuNav__title">
+                <span>DRINK</span>
+              </p>
+            </li>
+            <li class="menuNav__item" v-on:click="change('tab3')" v-bind:class="{'active': isActive === 'tab3'}">
+              <p class="menuNav__title">
+                <span>OTHER</span>
+              </p>
+            </li>
+            <li class="menuNav__item" v-on:click="change('tab4')" v-bind:class="{'active': isActive === 'tab4'}">
+              <p class="menuNav__title">
+                <span>comming soon</span>
+              </p>
+            </li>
+          </ul>
 
-          <nav class="menu__nav">
-            <div class="menu__inner--nav">
-              <ul class="menu__list--nav tab__label">
-                <li class="menu__item--nav">
-                  <button class="menu__button--nav active" data-id="tab__food">FOOD</button>
-                </li>
-                <li class="menu__item--nav">
-                  <button class="menu__button--nav" data-id="tab__drink">DRINK</button>
-                </li>
-                <li class="menu__item--nav">
-                  <button class="menu__button--nav" data-id="tab__sweet">SWEET</button>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-          <div class="tab__content active" id="tab__food">
+          <section v-if="isActive === 'tab1'" class="">
             <h2 class="section-subHeading bg-food u-pt100 u-pb100">Hamburger</h2>
             <nav class="menu__table">
               <ul class="menu__list--table">
@@ -112,17 +114,18 @@
                 </li>
               </ul>
             </nav>
-          </div>
-          <div class="tab__content" id="tab__drink">
-            <h2 class="section-subHeading bg-food u-pt100 u-pb100">Hamburger</h2>
-          </div>
-          <div class="tab__content" id="tab__sweet">
+          </section>
+          <section v-else-if="isActive === 'tab2'" class="">
+          </section>
+          <section v-else-if="isActive === 'tab3'" class="">
             3
-          </div>
+          </section>
+          <section v-else-if="isActive === 'tab4'" class="">
+            4
+          </section>
         </div>
-      </section>
+      </div>
     </div>
-
 
     <footer class="footer">
       <div class="footer__inner">
@@ -153,7 +156,7 @@
             </li>
             <li class="footer__item--banner">
               <figure>
-                <img src="./images/uber-eats.svg" alt="">
+                <img src="./images/rectangle.png" alt="">
               </figure>
               <p class="footer__title--banner">デリバリーサービスはこちらから</p>
               <ul class="app-button">
@@ -165,11 +168,13 @@
       </div>
       <p class="u-text-center u-mt60">©&nbsp;l2021&nbsp;lS.TANABE</p>
     </footer>
-  </div>
 
-  <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
-  <script src="./scripts/vendors/swiper.min.js"></script>
-  <script src="./scripts/libs/tabMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
+    <script src="./scripts/vendors/swiper.min.js"></script>
+    <script src="./scripts/libs/swiper.js"></script>
+    <script src="./scripts/libs/tabMenu.js"></script>
 </body>
 
 </html>

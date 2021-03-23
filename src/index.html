@@ -22,339 +22,278 @@
 
   <div id="app">
     <header class="header">
-      <div class="header__container">
+      <div class="header__inner">
         <h1 class="header__logo">
           <a href="index.html"><img src="./images/logo.png" alt=""></a>
         </h1>
-        <nav class="header__nav">
+        <nav class="header__menu">
           <ul class="header__list">
             <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
             <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
-            <li class="header__item"><a class="header__link" href="">CAST</a></li>
-            <li class="header__item"><a class="header__link" href="">CONTACT</a></li>
-            <li class="header__item"><a class="header__link" href="">ACCESS</a></li>
+            <li class="header__item"><a class="header__link" href="#">CAST</a></li>
+            <li class="header__item"><a class="header__link" href="#">CONTACT</a></li>
+            <li class="header__item"><a class="header__link" href="#">ACCESS</a></li>
           </ul>
         </nav>
         <ul></ul>
       </div>
     </header>
-    <section class="feature-news">
-
-    </section>
 
     <section class="hero">
       <div class="swiper-container" id="heroSlider">
-        <div class="hero__text">
+        <div class="hero__txt">
           <img src="./images/logo.png" alt="">
           <p>
             1杯のあたたかいコーヒーを提供する癒やしのカフェです。<br>
           </p>
-          <a href="menu.html">
-            <button class="btn slide-bg">メニューを見る</button>
+          <a href="">
+            <button class="btn slide-bg">当店について</button>
           </a>
         </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./images/hero2.jpg" alt="">
+            <img src="./images/star.png" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="./images/hero3.jpg" alt="">
+            <img src="./images/hero_3.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="./images/hero1.jpg" alt="">
+            <img src="./images/hero_3.jpg" alt="">
           </div>
         </div>
       </div>
     </section>
 
 
+    <section class="IndexIntro">
+      <div class="IndexIntro__inner">
+        <div class="IndexIntro__foot">
+          <figure class="IndexIntro__img">
+            <img src="./images/intro_1.jpg" alt="">
+          </figure>
+        </div>
+        <div class="IndexIntro__head">
+          <p class="IndexIntro__headCaption">
+            Makes me feel comfortable.
+          </p>
+          <h2 class="IndexIntro__headTitle">
+            1杯のあたたかいコーヒーを提供する癒やしのカフェです。
+          </h2>
+          <ul class="IndexIntro__list">
+            <li class="IndexIntro__item">
+              <figure class="IndexIntro__Img">
+                <img src="./images/wifi.png" alt="">
+              </figure>
+            </li>
+            <li class="IndexIntro__item">
+              <figure class="IndexIntro__headImg">
+                <img src="./images/smoke.png" alt="">
+              </figure>
+            </li>
+            <li class="IndexIntro__item">
+              <figure class="IndexIntro__headImg">
+                <img src="./images/take.png" alt="">
+              </figure>
+            </li>
+          </ul>
+          <p class="IndexIntro__txt">
+            CoffeeTalkは、人々の悩みを聞きながら、手持ちの材料を用いてその人達の心を癒す暖かい飲み物を提供するカフェです。
+          </p>
+          <a href="menu.html" class="u-mt30" style="display: block;">
+            <button class="btn slide-bg">メニューを見る</button>
+          </a>
+        </div>
+      </div>
+    </section>
 
 
-    <main class="main l-content__width">
-      <article class="main--left u-mt50">
+    <div id="tabMenu" class="menuNav">
+      <div class="menuNav__inner u-mt50 l-content__width">
+        <ul class="menuNav__list">
+          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab1')"
+            v-bind:class="{'active': isActive === 'tab1'}">
+            <p class="menuNav__title">
+              <span>お知らせ</span>
+            </p>
+          </li>
+          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab2')"
+            v-bind:class="{'active': isActive === 'tab2'}">
+            <p class="menuNav__title">
+              <span>スタッフ情報</span>
+            </p>
+          </li>
+          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab3')"
+            v-bind:class="{'active': isActive === 'tab3'}">
+            <p class="menuNav__title">
+              <span>キャンペーン</span>
+            </p>
+          </li>
+          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab4')"
+            v-bind:class="{'active': isActive === 'tab4'}">
+            <p class="menuNav__title">
+              <span></span>
+            </p>
+          </li>
+        </ul>
+      </div><!-- menuNav__inner -->
 
-
-        <div id="tabMenu">
-          <nav class="topics__box">
-            <ul class="topics__list">
-              <li class="topics__item" v-on:click="change('topic1')" v-bind:class="{'active': isActive === 'topic1'}">
-                <p>
-                  <span>お知らせ</span>
-                </p>
+      <section class="IndexNews" v-if="isActive === 'tab1'">
+        <div class="IndexNews__inner">
+          <h2 class="Index__title">
+            NEWS / <span>PICK UP</span>
+          </h2>
+          <ul class="IndexNews__list">
+            <li class="IndexNews__item">
+              <div class="IndexNews__date">
+                <span>2020.02</span>
+                <strong>02</strong>
+              </div>
+              <p class="IndexNews__category">
+                <a href="#">お知らせ</a>
+              </p>
+              <p class="IndexNews__name">
+                <a href="">メンテナンスのお知らせ</a>
+              </p>
+              <i></i>
+              </a>
+            </li>
+            <li class="IndexNews__item">
+              <div class="IndexNews__date">
+                <span>2020.02</span>
+                <strong>02</strong>
+              </div>
+              <p class="IndexNews__category">
+                <a href="#">お知らせ</a>
+              </p>
+              <p class="IndexNews__name">
+                <a href="">メンテナンスのお知らせ</a>
+              </p>
+              <i></i>
+              </a>
+            </li>
+            <li class="IndexNews__item">
+              <div class="IndexNews__date">
+                <span>2020.02</span>
+                <strong>02</strong>
+              </div>
+              <p class="IndexNews__category">
+                <a href="#">お知らせ</a>
+              </p>
+              <p class="IndexNews__name">
+                <a href="">メンテナンスのお知らせ</a>
+              </p>
+              <i></i>
+              </a>
+            </li>
+            <li class="IndexNews__item">
+              <div class="IndexNews__date">
+                <span>2020.02</span>
+                <strong>02</strong>
+              </div>
+              <p class="IndexNews__category">
+                <a href="#">お知らせ</a>
+              </p>
+              <p class="IndexNews__name">
+                <a href="">メンテナンスのお知らせ</a>
+              </p>
+              <i></i>
+              </a>
+            </li>
+          </ul>
+          <a class="u-mt30" style="display: block;">
+            <button class="btn slide-bg">続きを見る</button>
+          </a>
+        </div>
+      </section>
+      <section class="IndexStaff" v-else-if="isActive === 'tab2'">
+        <div class="IndexStaff__inner">
+          <div class="IndexStaff__item--right">
+            <h2 class="Index__title">
+              TODAY'S STAFF
+            </h2>
+            <ul class="IndexStaff__list IndexStaff__list--today">
+              <li class="IndexStaff__item IndexStaff__item--today">
+                <figure class="IndexStaff__img IndexStaff__img--today">
+                  <img src="./images/tetuya.png" alt="">
+                </figure>
+                <div class="IndexStaff__details">
+                  <h4 class="INdexStaff__name">TETUYA -テツヤ-</h4>
+                  <p class="IndexStaff__txt">
+                    好きなスポーツ：アメフト<br>
+                    趣味：岩盤浴<br>
+                    一言：いらっしゃいませ。
+                  </p>
+                </div>
               </li>
-              <li class="topics__item" v-on:click="change('topic2')" v-bind:class="{'active': isActive === 'topic2'}">
-                <p>
-                  <span>キャンペーン</span>
-                </p>
-              </li>
-              <li class="topics__item" v-on:click="change('topic3')" v-bind:class="{'active': isActive === 'topic3'}">
-                <p>
-                  <span>スタッフ</span>
-                </p>
-              </li>
-              <li class="topics__item" v-on:click="change('topic4')" v-bind:class="{'active': isActive === 'topic4'}">
-                <p>
-                  <span>求人情報</span>
-                </p>
+              <li class="IndexStaff__item IndexStaff__item--today">
+                <figure class="IndexStaff__img IndexStaff__img--today">
+                  <img src="./images/tetuya.png" alt="">
+                </figure>
+                <div class="IndexStaff__details">
+                  <h4 class="INdexStaff__name">TETUYA -テツヤ-</h4>
+                  <p class="IndexStaff__txt">
+                    好きなスポーツ：アメフト<br>
+                    趣味：岩盤浴<br>
+                    一言：いらっしゃいませ。
+                  </p>
+                </div>
               </li>
             </ul>
-
-            <div class="topics__article">
-              <ul class="topics__list--article">
-                <li v-if="isActive === 'topic1'" class="topics__item--article">
-                  <section class="news">
-                    <div class="l-content__width">
-                      <div class="news__container">
-                        <nav class="news__menu">
-                          <ul class="news__list">
-                            <li class="news__item">
-                              <a href="#">
-                                <div class="news__date">
-                                  <span>2020.02</span>
-                                  <strong>02</strong>
-                                </div>
-                                <p class="news__category">
-                                  お知らせ
-                                </p>
-                                <p class="news__txt">
-                                  緊急事態宣言延長に伴う変則営業時間継続のお知らせ
-                                </p>
-                                <i></i>
-                              </a>
-                            </li>
-                            <li class="news__item">
-                              <a href="#">
-                                <div class="news__date">
-                                  <span>2020.02</span>
-                                  <strong>02</strong>
-                                </div>
-                                <p class="news__category">
-                                  お知らせ
-                                </p>
-                                <p class="news__txt">
-                                  緊急事態宣言延長に伴う変則営業時間継続のお知らせ
-                                </p>
-                                <i></i>
-                              </a>
-                            </li>
-                            <!-- <li class="news__item">
-                            <div class="news__date">
-                              <span>2020.03</span>
-                              <strong>03</strong>
-                            </div>
-                            <p class="news__category">
-                              <a href="">イベント</a>
-                            </p>
-                            <p class="news__txt">
-                              <a href="">イベント - 開催中</a>
-                            </p>
-                            <i></i>
-                          </li>
-                          <li class="news__item">
-                            <div class="news__date">
-                              <span>2020.04</span>
-                              <strong>04</strong>
-                            </div>
-                            <p class="news__category">
-                              <a href="">キャンペーン</a>
-                            </p>
-                            <p class="news__txt">
-                              <a href="">キャンペーン - 開催中</a>
-                            </p>
-                            <i></i>
-                          </li>
-                          <li class="news__item">
-                            <a href="#">
-                              <div class="news__date">
-                                <span>2020.05</span>
-                                <strong>05</strong>
-                              </div>
-                              <p class="news__category">
-                                お知らせ
-                              </p>
-                              <p class="news__txt">
-                                メンテナンスのお知らせ
-                              </p>
-                              <i></i>
-                            </a>
-                          </li> -->
-                          </ul>
-                          <div class="u-mt50">
-                            <a href="#" class="view-btn">all view</a>
-                          </div>
-                        </nav>
-                      </div>
-                    </div>
-                  </section>
-                </li>
-                <li v-else-if="isActive === 'topic2'" class="topics__item--article">
-
-                </li>
-                <li v-else-if="isActive === 'topic3'" class="topics__item--article">
-                  <section class="top-member" class="topics__item--article">
-                    <div class="">
-                      <div class="top-member--inner">
-                        <div class="top-member__item">
-                        </div>
-                        <div class="top-member__item">
-                          <ul class="top-member__list--staff bg-member">
-                            <li class="top-member__item--staff">
-                              <figure>
-                                <img src="./images/tetuya.png" alt="">
-                              </figure>
-                              <div class="top-member__details--staff">
-                                <h4>TETUYA -テツヤ-</h4>
-                                <p>
-                                  好きなスポーツ：アメフト<br>
-                                  趣味：岩盤浴<br>
-                                  一言：いらっしゃいませ。
-                                </p>
-                              </div>
-                            </li>
-                            <li class="top-member__item--staff">
-                              <figure>
-                                <img src="./images/bob.png" alt="">
-                              </figure>
-                              <div class="top-member__details--staff">
-                                <h4>KEVIN -ケビン-</h4>
-                                <p>
-                                  好きな食べ物：ステーキ<br>
-                                  趣味：フットサル<br>
-                                  一言：ナイロビから着ました。ケビンです。
-                                </p>
-                              </div>
-                            </li>
-                            <li class="top-member__item--staff">
-                              <figure>
-                                <img src="./images/twitter_logo.png" alt="">
-                              </figure>
-                              <div class="top-member__details--staff">
-                                <h4>厨房担当</h4>
-                                <p>
-                                  本日のおすすめ：にくじゃが<br>
-                                  一言：今日のサービス料理は牛筋煮込みです。
-                                </p>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="top-member__item">
-                          <div class="top-member__title">
-                            <h2 class="">
-                              today's staff
-                            </h2>
-                            <p>本日の出勤メンバー</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  <section class="top-blog">
-                    <div class="">
-                      <div class="top-member__title">
-                        <h2 class="">
-                          staff blog
-                        </h2>
-                        <p>スタッフブログ</p>
-                      </div>
-                      <div class="top-blog--inner">
-                        <ul class="top-blog__list">
-                          <li class="top-blog__item">
-                            <a href="#">
-                              <figure class="top-blog__img">
-                                <img src="./images/hero3.jpg" alt="">
-                              </figure>
-                              <div class="top-blog__meta">
-                                <time class="top-blog__time--meta">2020.05/12</time>
-                                <span class="top-blog__name--meta">TAKURO</span>
-                              </div>
-                              <div class="top-blog__details">
-                                <p class="top-blog__txt--details">
-                                  テツさんたちと一緒にサウナ。
-                                </p>
-                              </div>
-                            </a>
-                          </li>
-                          <li class="top-blog__item">
-                            <a href="#">
-                              <figure class="top-blog__img">
-                                <img src="./images/hero3.jpg" alt="">
-                              </figure>
-                              <div class="top-blog__meta">
-                                <time class="top-blog__time--meta">2020.05/12</time>
-                                <span class="top-blog__name--meta">ケビン</span>
-                              </div>
-                              <div class="top-blog__details">
-                                <p class="top-blog__txt--details">
-                                  日本語の勉強中です。
-                                </p>
-                              </div>
-                            </a>
-                          </li>
-                          <li class="top-blog__item">
-                            <a href="#">
-                              <figure class="top-blog__img">
-                                <img src="./images/hero3.jpg" alt="">
-                              </figure>
-                              <div class="top-blog__meta">
-                                <time class="top-blog__time--meta">2020.05/12</time>
-                                <span class="top-blog__name--meta">TAKURO</span>
-                              </div>
-                              <div class="top-blog__details">
-                                <p class="top-blog__txt--details">
-                                  みんなで運動会をしました。
-                                </p>
-                              </div>
-                            </a>
-                          </li>
-                          <li class="top-blog__item u-text-cent">
-                            <a href="#" class="view-btn">all view</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </section>
-                </li>
-                <li v-else-if="isActive === 'topic4'" class="topics__item--article">
-
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-        </div>
-      </article>
-
-      <aside class="main--right">
-        <section class="banner">
-          <a href=""><img src="./images/banner1.png" alt="" class=""></a>
-          <a href=""><img src="./images/banner2.png" alt="" class="u-mt20"></a>
-        </section>
-
-        <section class="mailmaga u-mt30">
-          <div class="mailmaga__details">
-            <h3>メルマガ登録</h3>
-            <p>空メールを送るだけ！<br>最新情報やお得なクーポン等を配信中！お気軽にご登録ください！</p>
           </div>
-          <form class="mailmaga__form">
-            <input type="email" placeholder="asdf@example.com">
-            <input type="submit" value="登録">
-          </form>
-        </section>
 
-        <section class="tweet u-mt30">
-          <div class="tweet__header">
-            <div class="tweet__bg"></div>
-            <img class="tweet__icon" src="./images/logo.png" alt="">
+          <div class="IndexStaff__item--left">
+            <h2 class="Index__title">
+              staff blog
+            </h2>
+            <ul class="IndexStaff__list IndexStaff__list--blog">
+              <li class="IndexStaff__item IndexStaff__item--blog">
+                <a href="#">
+                  <figure class="IndexStaff__img IndexStaff__img--blog">
+                    <img src="./images/hero_3.jpg" alt="">
+                  </figure>
+                  <p class="IndexStaff__tag u-mt10">2020.05/12</p>
+                  <p class="IndexStaff__txt u-mt10">
+                    テツさんたちと一緒にサウナ。
+                  </p>
+                </a>
+              </li>
+              <li class="IndexStaff__item IndexStaff__item--blog">
+                <a href="#">
+                  <figure class="IndexStaff__img IndexStaff__img--blog">
+                    <img src="./images/hero_3.jpg" alt="">
+                  </figure>
+                  <p class="IndexStaff__tag u-mt10">2020.05/12</p>
+                  <p class="IndexStaff__txt u-mt10">
+                    テツさんたちと一緒にサウナ。
+                  </p>
+                </a>
+              </li>
+              <li class="IndexStaff__item IndexStaff__item--blog">
+                <a href="#">
+                  <figure class="IndexStaff__img IndexStaff__img--blog">
+                    <img src="./images/hero_3.jpg" alt="">
+                  </figure>
+                  <p class="IndexStaff__tag u-mt10">2020.05/12</p>
+                  <p class="IndexStaff__txt u-mt10">
+                    テツさんたちと一緒にサウナ。
+                  </p>
+                </a>
+              </li>
+              <li class="IndexStaff__item IndexStaff__item--blog u-text-cent">
+                <a href="#" class="view-btn">all view</a>
+              </li>
+            </ul>
           </div>
-          <div class="tweet">
-            <a class="twitter-timeline" data-width="100%" data-height="455"
-              href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </section>
-      </aside>
-    </main>
+        </div><!-- IndexStaff__inner -->
+      </section>
+      <section v-else-if="isActive === 'tab3'" style="height: 431px;"></section>
+      <section v-else-if="isActive === 'tab4'" style="height: 431px;"></section>
+    </div><!-- menuNav -->
+
+
+
+
+
 
     <footer class="footer">
       <div class="footer__inner">

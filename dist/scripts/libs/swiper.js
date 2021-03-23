@@ -7,10 +7,11 @@ var slide1 = new Swiper('#heroSlider', {
   effect: 'coverflow',
   centeredSlides: true,
   slidesPerView: 1,
+  // spaceBetween: 60,
   speed: 1000,
   breakpoints: {
     1024: {
-      slidesPerView: 2
+      slidesPerView: 1
     }
   } // autoplay: {
   //   delay: 6000,

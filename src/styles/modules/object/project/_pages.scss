@@ -1,64 +1,47 @@
-.main {
-  // margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
-
-  @include breakpoint-up(phone) {
-    flex-direction: row;
+.menuNav {
+  &__inner {
   }
-}
-
-.main--left {
-  flex-basis: 100%;
-}
-
-.main--right {
-  display: none;
-  flex-basis: 25%;
-}
-
-
-
-
-
-.topics {
   &__list {
     display: flex;
     flex-wrap: wrap;
+    &--new {
+      background: $cOrange;
+    }
   }
 
   &__item {
     cursor: pointer;
     position: relative;
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     display: flex;
     flex: 1 0 50%;
     transition: .1s;
+
+    &--Index {
+      &::after {
+        position: absolute;
+        border: 1px solid #ccc;
+        content: "";
+        margin-left: -1px;
+        margin-top: -1px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+
     @include breakpoint-up(phone) {
       flex-basis: calc(100% / 4);
     }
 
     &.active {
       background: $cBlack;
-      color:$cWhite;
+      color: $cWhite;
     }
-
-    &::after {
-      position: absolute;
-      content: "";
-      border: 1px solid $cGray-2;
-      margin-left: -1px;
-      margin-top: -1px;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-    }
-
-    p {
+  }
+  &__title {
       flex-grow: 1;
       padding: .5rem 1rem;
       text-align: center;
@@ -71,24 +54,13 @@
         font-size: 1.6rem;
         font-weight: 500;
       }
-    }
   }
 
-  &__article {
-
-  }
-  &__list--article {
+  &__list--menu {
     width: 100%;
     overflow: hidden;
     margin-top: -1px;
   }
-  &__item--article {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 20px;
-    border: 1px solid #ccc;
-  }
 }
 
 
@@ -96,30 +68,3 @@
 
 
 
-.tab_list {
-  overflow: hidden;
-}
-
-.tab_list li {
-  float: left;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.tab_list li:not(:first-child) {
-  border-left: none;
-}
-
-.tab_list li.active {
-
-}
-
-.article {
-
-}
-
-.article li {
-
-}

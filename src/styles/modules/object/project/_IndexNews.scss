@@ -1,35 +1,37 @@
-.news {
-  width: 100%;
-  &--inner {
-  }
-
-  &__menu {
-    width: 100%;
+.IndexNews {
+  &__inner {
+    padding: 50px 30px;
+    @extend .l-content__width;
+    border: 1px solid $cGray-2;
+    border-top: none;
   }
 
   &__list {
+    margin: 40px 0 0 0;
     width: 100%;
     display: inline-block;
     flex-wrap: wrap;
     justify-content: flex-start;
+
     @include breakpoint-up(tab-port) {
       display: flex;
     }
   }
 
   &__item {
-    width: 100%;
-    margin: 0 20px 20px 0;
     position: relative;
+    width: 100%;
+    margin: 0 40px 20px 0;
     padding-bottom: 20px;
     display: flex;
     align-items: center;
-    @include breakpoint-up(tab-port) {
-      width: calc((100% - 20px) / 2);
-    }
 
-    &:nth-child(2n) {
-      margin-right: 0;
+    @include breakpoint-up(tab-port) {
+      width: calc((100% - 40px) / 2);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
 
     &::before {
@@ -38,12 +40,24 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
       height: 1px;
       top: auto;
       bottom: 0;
-      background: $cRed-1;
+      background: #eb2f64;
       opacity: .3;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60%;
+
+    img {
+      @include absCenter;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -79,28 +93,31 @@
     border-radius: 20px;
     background: $cRed-1;
     font-weight: 500;
+
     @include breakpoint-up(phone) {
       display: block;
     }
+
     a {
       color: $cWhite;
     }
   }
 
-  &__txt {
+  &__name {
     width: 100%;
     align-self: center;
     margin-right: auto;
+
     @include breakpoint-up(tab-port) {
       width: calc(100% - 210px);
     }
-  } 
+  }
 
   i {
     display: block;
     position: relative;
     top: 0;
-    right: 10px;
+    right: 20px;
     width: 0;
     height: 0;
     border: 6px solid;
@@ -116,7 +133,7 @@
       height: 0;
       border: solid;
       border: 5px solid;
-      border-color: $cWhite $cWhite transparent transparent;
+      border-color: $cBgGray $cBgGray transparent transparent;
     }
   }
 }
