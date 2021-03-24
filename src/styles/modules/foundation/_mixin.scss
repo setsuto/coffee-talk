@@ -1,3 +1,4 @@
+/******************** breakpoint ********************/
 @mixin breakpoint-up($breakpoint) {
   @if $breakpoint == phone {
       @media only screen and (min-width: 700px) { @content };
@@ -28,6 +29,27 @@
   }
 }
 
+//******************** flex ********************//
+// @include flex($justify:center,$align:center)
+@mixin flex($justify:space-between,$align:center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//******************** object-fit ********************//
+// @include of($of_width:100%,$of_height:100%);
+@mixin of($of_width:100%,$of_height:()){
+  width: $of_width;
+  height: $of_height;
+  object-fit: cover;
+  }
+  
+  img{
+  @include of($of_width:100px,$of_height:100px);
+  }
+
+// position-center //
 @mixin absCenter {
   position: absolute;
   top: 50%;
@@ -36,6 +58,7 @@
 
 }
 
+//******************** clearfix ********************//
 @mixin clearfix {
   &:after {
     content: ".";
@@ -46,6 +69,7 @@
   } 
 }
 
+//******************** animation ********************//
 @mixin animation(
   $name,
   $duration: 1s,

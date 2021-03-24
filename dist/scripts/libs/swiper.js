@@ -4,7 +4,7 @@ var slide1 = new Swiper('#heroSlider', {
   // initialSlide: 1,
   loop: true,
   grabCursor: true,
-  effect: 'coverflow',
+  effect: 'fade',
   centeredSlides: true,
   slidesPerView: 1,
   // spaceBetween: 60,
@@ -13,10 +13,10 @@ var slide1 = new Swiper('#heroSlider', {
     1024: {
       slidesPerView: 1
     }
-  } // autoplay: {
-  //   delay: 6000,
-  // },
-
+  },
+  autoplay: {
+    delay: 6000
+  }
 });
 var slide2 = new Swiper('#top-memberSlider', {
   // initialSlide: 1,

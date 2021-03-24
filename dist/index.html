@@ -21,7 +21,7 @@
 
 
   <div id="app">
-    <header class="header">
+    <header class="header header--Index">
       <div class="header__inner">
         <h1 class="header__logo">
           <a href="index.html"><img src="./images/logo.png" alt=""></a>
@@ -40,26 +40,23 @@
     </header>
 
     <section class="hero">
-      <div class="swiper-container" id="heroSlider">
+      <div class="hero__inner">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="./images/video.mp4" type="video/mp4">
+            <source src="./images/video.webm" type="video/webm">
+          </video>
+        </div>
         <div class="hero__txt">
-          <img src="./images/logo.png" alt="">
+          <figure class="hero__img">
+            <img src="./images/logo.png" alt="">
+          </figure>
           <p>
             1杯のあたたかいコーヒーを提供する癒やしのカフェです。<br>
           </p>
           <a href="">
             <button class="btn slide-bg">当店について</button>
           </a>
-        </div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/star.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/hero_3.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/hero_3.jpg" alt="">
-          </div>
         </div>
       </div>
     </section>
@@ -68,7 +65,7 @@
     <section class="IndexIntro">
       <div class="IndexIntro__inner">
         <div class="IndexIntro__foot">
-          <figure class="IndexIntro__img">
+          <figure class="IndexIntro__img IndexIntro__img--foot">
             <img src="./images/intro_1.jpg" alt="">
           </figure>
         </div>
@@ -81,17 +78,17 @@
           </h2>
           <ul class="IndexIntro__list">
             <li class="IndexIntro__item">
-              <figure class="IndexIntro__Img">
+              <figure class="IndexIntro__img">
                 <img src="./images/wifi.png" alt="">
               </figure>
             </li>
             <li class="IndexIntro__item">
-              <figure class="IndexIntro__headImg">
+              <figure class="IndexIntro__img">
                 <img src="./images/smoke.png" alt="">
               </figure>
             </li>
             <li class="IndexIntro__item">
-              <figure class="IndexIntro__headImg">
+              <figure class="IndexIntro__img">
                 <img src="./images/take.png" alt="">
               </figure>
             </li>
@@ -107,7 +104,7 @@
     </section>
 
 
-    <div id="tabMenu" class="menuNav">
+    <div class="menuNav">
       <div class="menuNav__inner u-mt50 l-content__width">
         <ul class="menuNav__list">
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab1')"
@@ -125,7 +122,7 @@
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab3')"
             v-bind:class="{'active': isActive === 'tab3'}">
             <p class="menuNav__title">
-              <span>キャンペーン</span>
+              <span>イベント告知</span>
             </p>
           </li>
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab4')"
@@ -286,7 +283,28 @@
           </div>
         </div><!-- IndexStaff__inner -->
       </section>
-      <section v-else-if="isActive === 'tab3'" style="height: 431px;"></section>
+      <section class="IndexArchive" v-else-if="isActive === 'tab3'">
+        <div class="IndexArchive__inner">
+          <h2 class="Index__title">EVENT</h2>
+          <ul class="IndexArchive__list">
+            <li class="IndexArchive__item" v-for="article in articles">
+              <figure class="IndexArchive__img">
+                <img v-bind:src="article.thumbnail" alt="">
+              </figure>
+              <div class="IndexArchive__details">
+                <a href="#">
+                  <p>プレスリリース</p>
+                  <h3 class="IndexArchive__title">{{ article.txt }}</h3>
+                  <p class="IndexArchive__date">{{ article.date }}</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="u-text-center">
+            <button class="btn slide-bg" v-on:click="load" v-if="hasNext">もっと見る</button>
+          </div>
+        </div>
+      </section>
       <section v-else-if="isActive === 'tab4'" style="height: 431px;"></section>
     </div><!-- menuNav -->
 
@@ -343,7 +361,7 @@
   <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
   <script src="./scripts/vendors/swiper.min.js"></script>
   <script src="./scripts/libs/swiper.js"></script>
-  <script src="./scripts/libs/tabMenu.js"></script>
+  <script src="./scripts/libs/vue.js"></script>
 </body>
 
 </html>

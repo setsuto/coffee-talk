@@ -1,0 +1,48 @@
+.IndexArchive {
+  &__inner {
+    @extend .l-content__width;
+    @extend .IndexNews__inner;
+  }
+
+  &__list {
+    margin-top: 40px;
+  }
+  
+  &__item {
+    @include flex($justify:center,$align:flex-start);
+    flex-direction: row-reverse;
+    background: $cBgGray;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30%;
+    img {
+      @include absCenter;
+      @include of($of_width:100%,$of_height:100%);
+    }
+  }
+
+  &__details {
+    width: 50%;
+    padding: 20px 4%;
+    
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 1.4;
+  }
+
+  &__date {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    line-height: 2;
+    color: $cNavy-1;
+  }
+}

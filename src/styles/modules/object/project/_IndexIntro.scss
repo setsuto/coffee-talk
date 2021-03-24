@@ -1,8 +1,6 @@
 .IndexIntro {
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex($justify:center,$align:center);
     padding: 30px 5px;
     flex-direction: column;
     @extend .l-content__width;
@@ -20,18 +18,20 @@
   &__img {
     position: relative;
     overflow: hidden;
-    padding-bottom: 90%;
-
     img {
-      @include absCenter;
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
+      @include of($of_width:100%,$of_height:100%);
+    }
+  
+    &--foot {
+      padding-bottom: 90%;
+      img {
+        @include absCenter;
+      }
     }
   }
 
   &__head {
-   
+    
     width: 100%;
     @include breakpoint-up(phone) {
       width: 40%;
@@ -71,8 +71,7 @@
   &__list {
     max-width: 360px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    @include flex($justify:center,$align:center);
     background: $cBgGray;
     padding: 20px 0 40px 0;
     border-radius: 40px;

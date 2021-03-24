@@ -31,8 +31,7 @@
 @import "./modules/object/component/_typography";
 @import "./modules/object/component/_mask";
 @import "./modules/object/component/_btn";
-@import "./modules/object/component/_tweet";
-@import "./modules/object/component/_mailmaga";
+@import "./modules/object/component/_video";
 
 // -----------------------------------------------------------------
 // Project
@@ -42,9 +41,10 @@
 @import "./modules/object/project/_header-mobileMenu";
 @import "./modules/object/project/_hero";
 
+@import "./modules/object/project/_IndexIntro";
 @import "./modules/object/project/_IndexNews";
 @import "./modules/object/project/_IndexStaff";
-@import "./modules/object/project/_IndexIntro";
+@import "./modules/object/project/_IndexArchive";
 
 @import "./modules/object/project/_menu";
 

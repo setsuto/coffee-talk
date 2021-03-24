@@ -1,6 +1,10 @@
 .header {
-  position: relative;
   background: $cBlack;
+  &--Index {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
 
   &__inner {
     max-width: 1100px;
