@@ -29,99 +29,132 @@
           <ul class="header__list">
             <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
             <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
-            <li class="header__item"><a class="header__link" href="#">CAST</a></li>
-            <li class="header__item"><a class="header__link" href="#">CONTACT</a></li>
-            <li class="header__item"><a class="header__link" href="#">ACCESS</a></li>
+            <li class="header__item"><a class="header__link" href="about.html">ABOUT</a></li>
+            <li class="header__item"><a class="header__link" href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
         <ul></ul>
       </div>
     </header>
-
     <div class="l-content__width">
       <div class="menuNav">
         <div class="menuNav__inner u-mt50">
           <ul class="menuNav__list menuNav__list--new">
             <li class="menuNav__item" v-on:click="change('tab1')" v-bind:class="{'active': isActive === 'tab1'}">
               <p class="menuNav__title">
-                <span>FOOD</span>
+                <span>DRINK</span>
               </p>
             </li>
             <li class="menuNav__item" v-on:click="change('tab2')" v-bind:class="{'active': isActive === 'tab2'}">
               <p class="menuNav__title">
-                <span>DRINK</span>
-              </p>
-            </li>
-            <li class="menuNav__item" v-on:click="change('tab3')" v-bind:class="{'active': isActive === 'tab3'}">
-              <p class="menuNav__title">
-                <span>OTHER</span>
-              </p>
-            </li>
-            <li class="menuNav__item" v-on:click="change('tab4')" v-bind:class="{'active': isActive === 'tab4'}">
-              <p class="menuNav__title">
-                <span>comming soon</span>
+                <span>FOOD</span>
               </p>
             </li>
           </ul>
 
-          <section v-if="isActive === 'tab1'" class="">
-            <h2 class="section-subHeading bg-food u-pt100 u-pb100">Hamburger</h2>
-            <nav class="menu__table">
-              <ul class="menu__list--table">
-                <li class="menu__item--table">
-                  <a href="#">
-                    <figure>
-                      <img src="./images/burger_2.png" alt="">
-                    </figure>
-                    <div class="menu__details">
-                      <h3 class="menu__name--details">ル・ビッグ・マック</h3>
-                      <p class="menu__price--details">¥500</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="menu__item--table">
-                  <a href="#">
-                    <figure>
-                      <img src="./images/burger_3.png" alt="">
-                    </figure>
-                    <div class="menu__details">
-                      <h3 class="menu__name--details">チーズ・ロワイヤル</h3>
-                      <p class="menu__price--details">¥500</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="menu__item--table">
-                  <a href="#">
-                    <figure>
-                      <img src="./images/burger_2.png" alt="">
-                    </figure>
-                    <div class="menu__details">
-                      <h3 class="menu__name--details">ル・ビッグ・マック</h3>
-                      <p class="menu__price--details">¥500</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="menu__item--table">
-                  <a href="#">
-                    <figure>
-                      <img src="./images/burger_3.png" alt="">
-                    </figure>
-                    <div class="menu__details">
-                      <h3 class="menu__name--details">チーズ・ロワイヤル</h3>
-                      <p class="menu__price--details">¥500</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          <section v-if="isActive === 'tab2'" class="">
+            <h2 class="section-subHeading section-subHeading--food bg-food u-pt100 u-pb100">FOOD MENU</h2>
+            <h3 class="Index__title u-mt40">ハンバーガー</h3>
+            <ul class="menu__list">
+              <li class="menu__item menu__item--food">
+                <a href="#" class="menu__link">
+                  <figure class="menu__img menu__img--food">
+                    <img src="./images/burger_2.png" alt="">
+                  </figure>
+                  <div class="menu__details">
+                    <h4 class="menu__name">ル・ビッグ・マック</h4>
+                    <p class="menu__price">¥500</p>
+                  </div>
+                </a>
+              </li>
+              <li class="menu__item menu__item--food">
+                <a href="#" class="menu__link">
+                  <figure class="menu__img menu__img--food">
+                    <img src="./images/burger_3.png" alt="">
+                  </figure>
+                  <div class="menu__details">
+                    <h4 class="menu__name">ル・ビッグ・マック</h4>
+                    <p class="menu__price">¥500</p>
+                  </div>
+                </a>
+              </li>
+              <li class="menu__item menu__item--food">
+                <a href="#" class="menu__link">
+                  <figure class="menu__img menu__img--food">
+                    <img src="./images/burger_4.png" alt="">
+                  </figure>
+                  <div class="menu__details">
+                    <h4 class="menu__name">ル・ビッグ・マック</h4>
+                    <p class="menu__price">¥500</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <h3 class="Index__title u-mt40">ホットドッグ</h3>
+            <ul class="menu__list">
+              <li class="menu__item menu__item--food">
+                <a href="#" class="menu__link">
+                  <figure class="menu__img menu__img--food">
+                    <img src="./images/burger_2.png" alt="">
+                  </figure>
+                  <div class="menu__details">
+                    <h4 class="menu__name">ル・ビッグ・マック</h4>
+                    <p class="menu__price">¥500</p>
+                  </div>
+                </a>
+              </li>
+              <li class="menu__item menu__item--food">
+                <a href="#" class="menu__link">
+                  <figure class="menu__img menu__img--food">
+                    <img src="./images/burger_3.png" alt="">
+                  </figure>
+                  <div class="menu__details">
+                    <h4 class="menu__name">ル・ビッグ・マック</h4>
+                    <p class="menu__price">¥500</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </section>
-          <section v-else-if="isActive === 'tab2'" class="">
-          </section>
-          <section v-else-if="isActive === 'tab3'" class="">
-            3
-          </section>
-          <section v-else-if="isActive === 'tab4'" class="">
-            4
+          <section v-else-if="isActive === 'tab1'" class="">
+            <h2 class="section-subHeading section-subHeading--drink bg-food u-pt100 u-pb100">DRINK MENU</h2>
+            <h3 class="Index__title u-mt40">コーヒー</h3>
+            <ul class="menu__list--drink">
+              <li class="menu__item--drink">
+                <img src="./images/coffee_1.jpg" class="menu__img--drink">
+                <img src="./images/sale_logo.svg" class="menu__img--logo">
+                <h4 class="menu__name--drink">挽きたてコーヒー (S)</h4>
+                <div class="menu__area">
+                  <p>6kcal</p>
+                </div>
+                <div class="menu__area">
+                  <p>100円(税込)</p>
+                </div>
+              </li>
+
+              <li class="menu__item--drink">
+                <img src="./images/coffee_1.jpg" class="menu__img--drink">
+                
+                <h4 class="menu__name--drink">挽きたてコーヒー (M)</h4>
+                <div class="menu__area">
+                  <p>9kcal</p>
+                </div>
+                <div class="menu__area">
+                  <p>200円(税込)</p>
+                </div>
+              </li>
+
+              <li class="menu__item--drink">
+                <img src="./images/coffee_1.jpg" class="menu__img--drink">
+                <h4 class="menu__name--drink">挽きたてコーヒー (L)</h4>
+                <div class="menu__area">
+                  <p>9kcal</p>
+                </div>
+                <div class="menu__area">
+                  <p>300円(税込)</p>
+                </div>
+              </li>
+            </ul>
           </section>
         </div>
       </div>

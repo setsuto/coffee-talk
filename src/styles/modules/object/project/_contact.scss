@@ -1,0 +1,167 @@
+.contact {
+  max-width: 650px;
+  margin: 100px auto 0;
+  background: $cWhite;
+  overflow: hidden;
+
+  &__inner {
+    padding: 60px 0 0;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 30px 0;
+    background: #f6f7fa;
+    color: #555;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  &__list {
+    margin: 0 0 50px;
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-top: 20px;
+    button {
+      flex: auto;
+      margin-left: 10px;
+    }
+  }
+
+  label[for="name"],
+  label[for="email"] {
+    width: 23%;
+    margin-right: 2%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 1px solid $cGray-2;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+    width: 75%;
+    padding: 10px;
+    outline: none;
+    transition: 0.2s;
+  }
+
+  .errors {
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+    color: red;
+    margin: 10px 0 0;
+    font-size: 12px;
+  }
+}
+
+
+
+
+.badge {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  display: inline-block;
+  background: #f36565;
+  color: #fdfdfd;
+  padding: 4px 8px;
+  border-radius: 2px;
+  margin-left: .5em;
+  position: relative;
+  top: -1px;
+}
+
+
+
+
+.button {
+  background: $cBlack;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+}
+
+.button-outline {
+  background: #fff;
+  color: #83fad2;
+  border: 1px solid #83fad2;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0 10px;
+  min-width: 8em;
+  cursor: pointer;
+  outline: none;
+  transition: .2s;
+}
+
+.button-outline:hover {
+  background-color: #83fad2;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+.section--topTitle {
+  position: relative;
+  height: 300px;
+  margin: 0 0 100px;
+  background-size: cover;
+  color: $cWhite;
+  &--about {
+    background-image: linear-gradient(to right bottom, rgba(41,152,255,0.5), rgba(100,152,255,0.5)),url(../images/header_2.jpg);
+    background-position: center;
+  }
+  &--contact {
+    background-image: linear-gradient(to right bottom, rgba(126,213,111,0.5), rgba(40,180,133,0.5)),url(../images/hero_2.jpg);
+    background-position: center;
+  }
+  h1 {
+    position: relative;
+    font-weight: normal;
+    font-size: 5rem;
+    overflow: hidden;
+    padding: 100px 16px 1px;
+    @include breakpoint-up(tab-land) {
+      padding: 0;
+      text-align: center;
+      top: 100px;
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  p {
+    padding: 0 20px;
+    @include breakpoint-up(tab-land) {
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+      top: 110px;
+      width: 1200px;
+    }
+  }
+}

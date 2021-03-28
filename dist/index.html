@@ -136,70 +136,101 @@
 
       <section class="IndexNews" v-if="isActive === 'tab1'">
         <div class="IndexNews__inner">
-          <h2 class="Index__title">
-            NEWS / <span>PICK UP</span>
-          </h2>
-          <ul class="IndexNews__list">
-            <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
-              </p>
-              <i></i>
+          <article class="IndexNews__article">
+            <h2 class="Index__title">
+              NEWS / <span>PICK UP</span>
+            </h2>
+            <ul class="IndexNews__list">
+              <li class="IndexNews__item">
+                <div class="IndexNews__date">
+                  <span>2020.02</span>
+                  <strong>02</strong>
+                </div>
+                <p class="IndexNews__category">
+                  <a href="#">お知らせ</a>
+                </p>
+                <p class="IndexNews__name">
+                  <a href="">メンテナンスのお知らせ</a>
+                </p>
+                <i></i>
+                </a>
+              </li>
+              <li class="IndexNews__item">
+                <div class="IndexNews__date">
+                  <span>2020.02</span>
+                  <strong>02</strong>
+                </div>
+                <p class="IndexNews__category">
+                  <a href="#">お知らせ</a>
+                </p>
+                <p class="IndexNews__name">
+                  <a href="">メンテナンスのお知らせ</a>
+                </p>
+                <i></i>
+                </a>
+              </li>
+              <li class="IndexNews__item">
+                <div class="IndexNews__date">
+                  <span>2020.02</span>
+                  <strong>02</strong>
+                </div>
+                <p class="IndexNews__category">
+                  <a href="#">お知らせ</a>
+                </p>
+                <p class="IndexNews__name">
+                  <a href="">メンテナンスのお知らせ</a>
+                </p>
+                <i></i>
+                </a>
+              </li>
+              <li class="IndexNews__item">
+                <div class="IndexNews__date">
+                  <span>2020.02</span>
+                  <strong>02</strong>
+                </div>
+                <p class="IndexNews__category">
+                  <a href="#">お知らせ</a>
+                </p>
+                <p class="IndexNews__name">
+                  <a href="">メンテナンスのお知らせ</a>
+                </p>
+                <i></i>
+                </a>
+              </li>
+            </ul>
+            <a class="u-mt30" style="display: block;">
+              <button class="btn slide-bg">続きを見る</button>
+            </a>
+          </article>
+          <aside class="IndexNews__aside">
+            <p class="Index__title">アーカイブ</p>
+            <div class="accordion">
+              <a class="toggle" @click="toggle()">
+                <div slot="title">Chapter1-2</div>
+                <transition name="rotation">
+                  <i class="fas fa-chevron-down" v-if="!isOpen"></i>
+                </transition>
+                <transition name="rotation">
+                  <i class="fas fa-chevron-up" v-if="isOpen"></i>
+                </transition>
               </a>
-            </li>
-            <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
-              </p>
-              <i></i>
-              </a>
-            </li>
-            <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
-              </p>
-              <i></i>
-              </a>
-            </li>
-            <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
-              </p>
-              <i></i>
-              </a>
-            </li>
-          </ul>
-          <a class="u-mt30" style="display: block;">
-            <button class="btn slide-bg">続きを見る</button>
-          </a>
+              <transition name="accordion" @before-enter="beforeEnter" @enter="enter" @before-leave="beforeLeave"
+                @leave="leave">
+                <div class="accordion-body" v-if="isOpen">
+                  <ul class="details" slot="detail">
+                    <li class="cat-item cat-item-5"><a href="http://localhost/wordpress/?cat=5">5chまとめ</a>
+                    </li>
+                    <li class="cat-item cat-item-3"><a href="http://localhost/wordpress/?cat=3">ゲーム</a>
+                    </li>
+                    <li class="cat-item cat-item-2"><a href="http://localhost/wordpress/?cat=2">コラム</a>
+                    </li>
+                    <li class="cat-item cat-item-4"><a href="http://localhost/wordpress/?cat=4">音楽</a>
+                    </li>
+                  </ul>
+                </div>
+              </transition>
+            </div>
+          </aside>
         </div>
       </section>
       <section class="IndexStaff" v-else-if="isActive === 'tab2'">

@@ -40,7 +40,6 @@
 
   &__headCaption {
     text-align: center;
-    color: $cRed-1;
     font-style: italic;
     font-family: serif;
     letter-spacing: 1px;
@@ -73,7 +72,7 @@
     margin: 0 auto;
     @include flex($justify:center,$align:center);
     background: $cBgGray;
-    padding: 20px 0 40px 0;
+    padding: 10px 0 40px 0;
     border-radius: 40px;
     .IndexIntro__item:nth-child(1)::before {
       content: "wifi完備";
@@ -96,17 +95,18 @@
   }
 
   &__item {
-    padding: 0 5px;
+    padding: 0 10px;
     position: relative;
 
     &::before {
       text-align: center;
       position: absolute;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       right: 0;
       left: 0;
       bottom: -30px;
       color: $cWhite;
+      border-radius: 30px;
     }
   }
   &__txt {

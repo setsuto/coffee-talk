@@ -30,9 +30,8 @@
           <ul class="header__list">
             <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
             <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
-            <li class="header__item"><a class="header__link" href="#">CAST</a></li>
-            <li class="header__item"><a class="header__link" href="#">CONTACT</a></li>
-            <li class="header__item"><a class="header__link" href="#">ACCESS</a></li>
+            <li class="header__item"><a class="header__link" href="about.html">ABOUT</a></li>
+            <li class="header__item"><a class="header__link" href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
         <ul></ul>
@@ -54,8 +53,8 @@
           <p>
             1杯のあたたかいコーヒーを提供する癒やしのカフェです。<br>
           </p>
-          <a href="">
-            <button class="btn slide-bg">当店について</button>
+          <a href="menu.html">
+            <button class="btn slide-bg">メニューを見る</button>
           </a>
         </div>
       </div>
@@ -96,13 +95,12 @@
           <p class="IndexIntro__txt">
             CoffeeTalkは、人々の悩みを聞きながら、手持ちの材料を用いてその人達の心を癒す暖かい飲み物を提供するカフェです。
           </p>
-          <a href="menu.html" class="u-mt30" style="display: block;">
-            <button class="btn slide-bg">メニューを見る</button>
+          <a href="about.html" class="u-mt30" style="display: block;">
+            <button class="btn slide-bg">当店について</button>
           </a>
         </div>
       </div>
     </section>
-
 
     <div class="menuNav">
       <div class="menuNav__inner u-mt50 l-content__width">
@@ -141,65 +139,64 @@
           </h2>
           <ul class="IndexNews__list">
             <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
               </p>
               <i></i>
-              </a>
             </li>
             <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
               </p>
               <i></i>
-              </a>
             </li>
             <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
               </p>
               <i></i>
-              </a>
             </li>
             <li class="IndexNews__item">
-              <div class="IndexNews__date">
-                <span>2020.02</span>
-                <strong>02</strong>
-              </div>
-              <p class="IndexNews__category">
-                <a href="#">お知らせ</a>
-              </p>
-              <p class="IndexNews__name">
-                <a href="">メンテナンスのお知らせ</a>
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
               </p>
               <i></i>
-              </a>
             </li>
           </ul>
-          <a class="u-mt30" style="display: block;">
-            <button class="btn slide-bg">続きを見る</button>
-          </a>
+          <nav>
+            <ul class="IndexNews__list--pager">
+              <li class="nav__item--pagerNum">
+                <a href="">1</a>
+              </li>
+              <li class="nav__item--pagerNum">
+                <a href="">2</a>
+              </li>
+              <li class="nav__item--pagerNum">
+                <a href="">3</a>
+              </li>
+              <li class="nav__item--pagerNum">
+                <a href="">4</a>
+              </li>
+              <li class="nav__item--pagerNum">
+                <a href="">5</a>
+              </li>
+              <li class="nav__item--pagerNext">
+                <a href=""></a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </section>
       <section class="IndexStaff" v-else-if="isActive === 'tab2'">
@@ -218,20 +215,20 @@
                   <p class="IndexStaff__txt">
                     好きなスポーツ：アメフト<br>
                     趣味：岩盤浴<br>
-                    一言：いらっしゃいませ。
+                    一言：日本語勉強中です。
                   </p>
                 </div>
               </li>
               <li class="IndexStaff__item IndexStaff__item--today">
                 <figure class="IndexStaff__img IndexStaff__img--today">
-                  <img src="./images/tetuya.png" alt="">
+                  <img src="./images/bob.png" alt="">
                 </figure>
                 <div class="IndexStaff__details">
-                  <h4 class="INdexStaff__name">TETUYA -テツヤ-</h4>
+                  <h4 class="INdexStaff__name">KENJI -ケンヂ-</h4>
                   <p class="IndexStaff__txt">
-                    好きなスポーツ：アメフト<br>
-                    趣味：岩盤浴<br>
-                    一言：いらっしゃいませ。
+                    好きなスポーツ：プロレス<br>
+                    趣味：サウナ<br>
+                    一言：やることなすこと桁外れです。
                   </p>
                 </div>
               </li>
