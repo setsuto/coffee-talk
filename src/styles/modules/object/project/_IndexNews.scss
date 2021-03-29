@@ -1,140 +1,127 @@
 .IndexNews {
   &__inner {
-    padding: 20px 40px; 
+    padding: 100px 10px 10px;
     @extend .l-content__width;
-    border: 1px solid $cGray-2;
-    border-top: none;
     @include breakpoint-up(phone) {
-      padding: 50px 80px;
+      padding: 50px 40px;
     }
   }
 
   &__list {
-    margin: 40px 0 0 0;
-    width: 100%;
-    display: inline-block;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    margin-top: 60px;
 
-    @include breakpoint-up(tab-port) {
-      display: flex;
+    &--pager {
+      margin-top: 80px;
+      display: block;
+      line-height: 40px;
+      text-align: left;
     }
   }
 
   &__item {
     position: relative;
-    width: 100%;
-    margin: 0 40px 20px 0;
-    padding-bottom: 20px;
+    margin: 60px 0 0 0;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.4rem;
+    line-height: 1.4;
 
-    @include breakpoint-up(tab-port) {
-      width: calc((100% - 40px) / 2);
+    @include breakpoint-up(phone) {
+      i {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 6px solid;
+        border-color: $cBlack $cBlack transparent transparent;
+        transform: rotate(45deg);
 
-      &:nth-child(2n) {
-        margin-right: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          right: -4px;
+          top: -4px;
+          width: 0;
+          height: 0;
+          border: solid;
+          border: 5px solid;
+          border-color: $cWhite $cWhite transparent transparent;
+        }
       }
-    }
-
-    &::before {
-      content: " ";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      top: auto;
-      bottom: 0;
-      background: #eb2f64;
-      opacity: .3;
-    }
-  }
-
-  &__img {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 60%;
-
-    img {
-      @include absCenter;
-      @include of($of_width:100%,$of_height:100%);
     }
   }
 
   &__date {
-    color: $cBlack;
-    align-self: center;
-    width: 75px;
-    display: inline-block;
-
-    span {
-      display: block;
-      line-height: 1;
-      font-size: 1.2rem;
-      margin-bottom: 4px;
-    }
-
-    strong {
-      display: block;
-      line-height: 1;
-      font-size: 3.4rem;
-      font-weight: 500;
-    }
-  }
-
-  &__category {
-    align-self: center;
-    margin-right: 20px;
-    text-align: center;
-    display: none;
+    position: relative;
+    margin: 0 10px 0 0;
+    letter-spacing: 1px;
     width: 80px;
-    padding: 5px 0;
     font-size: 1rem;
-    border-radius: 20px;
-    background: $cRed-1;
-    font-weight: 500;
 
     @include breakpoint-up(phone) {
-      display: block;
+      font-size: 1.2rem;
+      width: 170px;
+
+      &::after {
+        content: "";
+        background: #bbb;
+        bottom: 0;
+        height: 1px;
+        margin: auto;
+        position: absolute;
+        right: 24px;
+        top: 0;
+        width: 40px;
+      }
     }
+  }
+
+  &__txt {
+    max-width: 920px;
 
     a {
-      color: $cWhite;
+      padding: 0;
+
+      @include breakpoint-up(phone) {
+        padding: 0 80px 0 0;
+      }
+
+      display: inline-block;
     }
   }
 
-  &__name {
-    width: 100%;
-    align-self: center;
-    margin-right: auto;
+  &__txtinner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    @include breakpoint-up(tab-port) {
-      width: calc(100% - 210px);
+    span {
+      font-size: 1.6rem;
     }
   }
+}
 
-  i {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 20px;
-    width: 0;
-    height: 0;
-    border: 6px solid;
-    border-color: $cBlack $cBlack transparent transparent;
-    transform: rotate(45deg);
 
-    &::before {
-      content: "";
-      position: absolute;
-      right: -4px;
-      top: -4px;
-      width: 0;
-      height: 0;
-      border: solid;
-      border: 5px solid;
-      border-color: $cBgGray $cBgGray transparent transparent;
+
+
+.nav {
+  &__item {
+    &--pagerNum {
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+      margin: 0 3px;
+      transition: .3s;
+
+      a {
+        padding: 0 7px 12px;
+        border-bottom: 1px solid $cBlack;
+        color: $cBlack;
+      }
     }
+
+    &--next {}
   }
 }

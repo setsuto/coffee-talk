@@ -1,37 +1,31 @@
-const slide1 = new Swiper('#heroSlider', {
+var slide1 = new Swiper('#aboutSlider1', {
   // initialSlide: 1,
   loop: true,
   grabCursor: true,
   effect: 'fade',
-  centeredSlides: true,
+  // centeredSlides: true,
   slidesPerView: 1,
-  // spaceBetween: 60,
   speed: 1000,
-  breakpoints: {
-    1024: {
-      slidesPerView: 1,
-    },
-  },
   autoplay: {
-    delay: 6000,
+    delay: 4000,
   },
 });
 
-const slide2 = new Swiper('#top-memberSlider', {
+var slide2 = new Swiper('#featureSlider', {
   // initialSlide: 1,
   // centeredSlides: true,
   loop: true,
   grabCursor: true,
   effect: 'slide',
-  slidesPerView: 1,
-  spaceBetween: 10,
+  slidesPerView: 2,
+  spaceBetween: 20,
   speed: 1000,
   breakpoints: {
     600: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     1000: {
-      slidesPerView: 2,
+      slidesPerView: 4,
     },
   },
   autoplay: {
@@ -39,7 +33,9 @@ const slide2 = new Swiper('#top-memberSlider', {
   },
 });
 
-const galleryThumbs = new Swiper('#gallery-thumbs', {
+
+
+var galleryThumbs = new Swiper('#gallery-thumbs', {
   spaceBetween: 10,
   slidesPerView: 5,
   freeMode: true,
@@ -47,13 +43,15 @@ const galleryThumbs = new Swiper('#gallery-thumbs', {
   watchSlidesProgress: true,
 });
 
-const galleryTop = new Swiper('#gallery-top', {
+var galleryTop = new Swiper('#gallery-top', {
   // spaceBetween: 10,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   thumbs: {
-    swiper: galleryThumbs,
-  },
+    swiper: galleryThumbs
+  }
 });
+
+

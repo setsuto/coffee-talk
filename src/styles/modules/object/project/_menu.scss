@@ -1,101 +1,88 @@
 .menu {
   margin-top: 30px;
-  &__nav {
-    height: 70px;
-    width: 100%;
-    overflow: hidden;
-    background: $cOrange;
-  }
 
-  &__inner--nav {
-    height: inherit;
-    padding: 0 0 0 40px;
-  }
-
-  &__list--nav {
-    display: inline-table;
-    max-width: 100%;
-    height: inherit;
-    padding-right: 40px;
-  }
-
-  &__item--nav {
-    display: table-cell;
-    height: inherit;
-    white-space: nowrap;
-  }
-
-  &__button--nav {
-    color: $cWhite;
-    cursor: pointer;
-    display: block;
-    height: inherit;
-    padding: 0 16px;
-    font-size: 2rem;
-    font-weight: bold;
-    transition: background-color .1s, opacity .1s, font-size .1s;
-
-    &.active {
-      color: $cWhite;
-      background: $cBlack;
-    }
-
-    &:not(.active):hover {
-      transition: 0.1s;
-    }
-  }
-
-  &__table {}
-
-  &__list--table {
-    padding: 10px;
+  &__list {
+    margin-top: 40px;
     @include clearfix;
-    @include breakpoint-up(phone) {
-      padding: 50px;
+
+    &--drink {
+      margin-top: 40px;
+      display: grid;
+      grid-column: center-start / center-end;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 70px;
     }
   }
 
-  &__item--table {
+  &__item {
     float: left;
 
-    @include breakpoint-down(phone) {
-      width: calc(50% - 10px / 2);
-      margin: 0 10px 10px 0;
-      &:nth-child(2n) {
-        margin-right: 0;
+    &--food {
+      @include breakpoint-down(phone) {
+        width: calc(50% - 10px / 2);
+        margin: 0 10px 10px 0;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
       }
-    }
-    
-    @include breakpoint-up(phone) {
-      width: calc(25% - 150px / 4);
-      margin: 0 50px 0 0;
-      &:last-child {
-        margin-right: 0;
+
+      @include breakpoint-up(phone) {
+        width: calc(25% - 150px / 4);
+        margin: 0 50px 0 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
-    a {
-      display: block;
-      color: $cBlack;
-      background: $cWhite;
-      border-radius: 6px;
-      padding: 5px;
-      box-shadow: $shadow-1;
+    &--drink {
+      background-color: $cBgGray;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 40px;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $cBlack;
+    background: $cWhite;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: $shadow-1;
+    width: 100%;
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    &--food {
+      padding-bottom: 70%;
     }
 
-    figure {
-      position: relative;
-      padding-top: 70%;
-      overflow: hidden;
-      border-radius: 6px;
-      margin-bottom: 16px;
+    &--drink {
+      width: 100%;
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+      z-index: 1;
+    }
+    &--logo {
+      grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    fill: $cRed-1;
+    height: 60px;
+    width: 60px;
+    z-index: 2;
+    justify-self: end;
+    margin: 1rem;
+    }
 
-      img {
-        @include absCenter;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
+    img {
+      @include absCenter;
+      @include of($of_width:100%, $of_height:100%);
     }
   }
 
@@ -107,13 +94,29 @@
     margin-bottom: 12px;
   }
 
-  &__name--details {
+  &__name {
     font-size: 1.4rem;
     display: block;
     margin-bottom: 10px;
+
+    &--drink {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+      justify-self: center;
+      align-self: end;
+      z-index: 3;
+      width: 80%;
+      font-size: 1.6rem;
+      text-align: center;
+      padding: 10px;
+      background: $cBlack;
+      color: $cWhite;
+      font-weight: 400;
+      transform: translateY(50%);
+    }
   }
 
-  &__price--details {
+  &__price {
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -126,5 +129,14 @@
       color: $cRed-1;
       padding-left: .5rem;
     }
+  }
+
+  &__area {
+    // grid-column: 1 / -1;
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

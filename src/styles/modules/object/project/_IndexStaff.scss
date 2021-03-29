@@ -2,13 +2,23 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    @extend .l-content__width;
     @extend .IndexNews__inner;
+    @extend .l-content__width;
+    flex-wrap: wrap;
   }
-
-  &__item--left,
-  &__item--right {
-    flex-basis: 48%;
+  &__head {
+    width: 100%;
+    @include breakpoint-up(tab-port) {
+      width: 49%;
+      margin-right: 2%;
+    }
+  }
+  &__foot {
+    flex: 1;
+    margin-top: 30px;
+    @include breakpoint-up(tab-port) {
+      margin: 0;
+    }
   }
 
   &__list {
