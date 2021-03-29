@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/dist/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/images/about_icon_2.svg">
   <title>COFFEE-TALK</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
   <link rel='stylesheet'
@@ -18,8 +18,6 @@
 </head>
 
 <body>
-
-
   <div id="app">
     <header class="header header--Index">
       <div class="header__inner">
@@ -30,9 +28,8 @@
           <ul class="header__list">
             <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
             <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
-            <li class="header__item"><a class="header__link" href="#">CAST</a></li>
-            <li class="header__item"><a class="header__link" href="#">CONTACT</a></li>
-            <li class="header__item"><a class="header__link" href="#">ACCESS</a></li>
+            <li class="header__item"><a class="header__link" href="about.html">ABOUT</a></li>
+            <li class="header__item"><a class="header__link" href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
         <ul></ul>
@@ -47,20 +44,12 @@
             <source src="./images/video.webm" type="video/webm">
           </video>
         </div>
-        <div class="hero__txt">
-          <figure class="hero__img">
-            <img src="./images/logo.png" alt="">
-          </figure>
-          <p>
-            1杯のあたたかいコーヒーを提供する癒やしのカフェです。<br>
-          </p>
-          <a href="">
-            <button class="btn slide-bg">当店について</button>
-          </a>
+        <div class="hero__box">
+          <h2 class="hero__title">COFFEE&nbsp;<span>TALK</span></h2>
+          <p class="hero__txt">1杯のあたたかいコーヒーを提供する癒やしのカフェです。</p>
         </div>
       </div>
     </section>
-
 
     <section class="IndexIntro">
       <div class="IndexIntro__inner">
@@ -96,13 +85,12 @@
           <p class="IndexIntro__txt">
             CoffeeTalkは、人々の悩みを聞きながら、手持ちの材料を用いてその人達の心を癒す暖かい飲み物を提供するカフェです。
           </p>
-          <a href="menu.html" class="u-mt30" style="display: block;">
-            <button class="btn slide-bg">メニューを見る</button>
+          <a href="about.html" class="u-mt30" style="display: block;">
+            <button class="btn slide-bg">当店について</button>
           </a>
         </div>
       </div>
     </section>
-
 
     <div class="menuNav">
       <div class="menuNav__inner u-mt50 l-content__width">
@@ -110,7 +98,7 @@
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab1')"
             v-bind:class="{'active': isActive === 'tab1'}">
             <p class="menuNav__title">
-              <span>お知らせ</span>
+              <span>イベント告知</span>
             </p>
           </li>
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab2')"
@@ -122,7 +110,7 @@
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab3')"
             v-bind:class="{'active': isActive === 'tab3'}">
             <p class="menuNav__title">
-              <span>イベント告知</span>
+              <span>お知らせ</span>
             </p>
           </li>
           <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab4')"
@@ -134,108 +122,76 @@
         </ul>
       </div><!-- menuNav__inner -->
 
-      <section class="IndexNews" v-if="isActive === 'tab1'">
+      <section class="IndexNews" v-if="isActive === 'tab3'">
         <div class="IndexNews__inner">
-          <article class="IndexNews__article">
-            <h2 class="Index__title">
-              NEWS / <span>PICK UP</span>
-            </h2>
-            <ul class="IndexNews__list">
-              <li class="IndexNews__item">
-                <div class="IndexNews__date">
-                  <span>2020.02</span>
-                  <strong>02</strong>
-                </div>
-                <p class="IndexNews__category">
-                  <a href="#">お知らせ</a>
-                </p>
-                <p class="IndexNews__name">
-                  <a href="">メンテナンスのお知らせ</a>
-                </p>
-                <i></i>
+          <h2 class="Index__title">
+            NEWS / <span>PICK UP</span>
+          </h2>
+          <ul class="IndexNews__list">
+            <li class="IndexNews__item">
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
                 </a>
+              </p>
+              <i></i>
+            </li>
+            <li class="IndexNews__item">
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
+              </p>
+              <i></i>
+            </li>
+            <li class="IndexNews__item">
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
+              </p>
+              <i></i>
+            </li>
+            <li class="IndexNews__item">
+              <p class="IndexNews__date">2021.01.01</p>
+              <p class="IndexNews__txt">
+                <a href="#">
+                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
+                </a>
+              </p>
+              <i></i>
+            </li>
+          </ul>
+          <nav>
+            <ul class="IndexNews__list--pager">
+              <li class="nav__item--pagerNum">
+                <a href="">1</a>
               </li>
-              <li class="IndexNews__item">
-                <div class="IndexNews__date">
-                  <span>2020.02</span>
-                  <strong>02</strong>
-                </div>
-                <p class="IndexNews__category">
-                  <a href="#">お知らせ</a>
-                </p>
-                <p class="IndexNews__name">
-                  <a href="">メンテナンスのお知らせ</a>
-                </p>
-                <i></i>
-                </a>
+              <li class="nav__item--pagerNum">
+                <a href="">2</a>
               </li>
-              <li class="IndexNews__item">
-                <div class="IndexNews__date">
-                  <span>2020.02</span>
-                  <strong>02</strong>
-                </div>
-                <p class="IndexNews__category">
-                  <a href="#">お知らせ</a>
-                </p>
-                <p class="IndexNews__name">
-                  <a href="">メンテナンスのお知らせ</a>
-                </p>
-                <i></i>
-                </a>
+              <li class="nav__item--pagerNum">
+                <a href="">3</a>
               </li>
-              <li class="IndexNews__item">
-                <div class="IndexNews__date">
-                  <span>2020.02</span>
-                  <strong>02</strong>
-                </div>
-                <p class="IndexNews__category">
-                  <a href="#">お知らせ</a>
-                </p>
-                <p class="IndexNews__name">
-                  <a href="">メンテナンスのお知らせ</a>
-                </p>
-                <i></i>
-                </a>
+              <li class="nav__item--pagerNum">
+                <a href="">4</a>
+              </li>
+              <li class="nav__item--pagerNum">
+                <a href="">5</a>
+              </li>
+              <li class="nav__item--pagerNext">
+                <a href=""></a>
               </li>
             </ul>
-            <a class="u-mt30" style="display: block;">
-              <button class="btn slide-bg">続きを見る</button>
-            </a>
-          </article>
-          <aside class="IndexNews__aside">
-            <p class="Index__title">アーカイブ</p>
-            <div class="accordion">
-              <a class="toggle" @click="toggle()">
-                <div slot="title">Chapter1-2</div>
-                <transition name="rotation">
-                  <i class="fas fa-chevron-down" v-if="!isOpen"></i>
-                </transition>
-                <transition name="rotation">
-                  <i class="fas fa-chevron-up" v-if="isOpen"></i>
-                </transition>
-              </a>
-              <transition name="accordion" @before-enter="beforeEnter" @enter="enter" @before-leave="beforeLeave"
-                @leave="leave">
-                <div class="accordion-body" v-if="isOpen">
-                  <ul class="details" slot="detail">
-                    <li class="cat-item cat-item-5"><a href="http://localhost/wordpress/?cat=5">5chまとめ</a>
-                    </li>
-                    <li class="cat-item cat-item-3"><a href="http://localhost/wordpress/?cat=3">ゲーム</a>
-                    </li>
-                    <li class="cat-item cat-item-2"><a href="http://localhost/wordpress/?cat=2">コラム</a>
-                    </li>
-                    <li class="cat-item cat-item-4"><a href="http://localhost/wordpress/?cat=4">音楽</a>
-                    </li>
-                  </ul>
-                </div>
-              </transition>
-            </div>
-          </aside>
+          </nav>
         </div>
       </section>
       <section class="IndexStaff" v-else-if="isActive === 'tab2'">
         <div class="IndexStaff__inner">
-          <div class="IndexStaff__item--right">
+          <div class="IndexStaff__head">
             <h2 class="Index__title">
               TODAY'S STAFF
             </h2>
@@ -249,27 +205,27 @@
                   <p class="IndexStaff__txt">
                     好きなスポーツ：アメフト<br>
                     趣味：岩盤浴<br>
-                    一言：いらっしゃいませ。
+                    一言：日本語勉強中です。
                   </p>
                 </div>
               </li>
               <li class="IndexStaff__item IndexStaff__item--today">
                 <figure class="IndexStaff__img IndexStaff__img--today">
-                  <img src="./images/tetuya.png" alt="">
+                  <img src="./images/bob.png" alt="">
                 </figure>
                 <div class="IndexStaff__details">
-                  <h4 class="INdexStaff__name">TETUYA -テツヤ-</h4>
+                  <h4 class="INdexStaff__name">KENJI -ケンヂ-</h4>
                   <p class="IndexStaff__txt">
-                    好きなスポーツ：アメフト<br>
-                    趣味：岩盤浴<br>
-                    一言：いらっしゃいませ。
+                    好きなスポーツ：プロレス<br>
+                    趣味：サウナ<br>
+                    一言：やることなすこと桁外れです。
                   </p>
                 </div>
               </li>
             </ul>
           </div>
 
-          <div class="IndexStaff__item--left">
+          <div class="IndexStaff__foot">
             <h2 class="Index__title">
               staff blog
             </h2>
@@ -314,7 +270,7 @@
           </div>
         </div><!-- IndexStaff__inner -->
       </section>
-      <section class="IndexArchive" v-else-if="isActive === 'tab3'">
+      <section class="IndexArchive" v-else-if="isActive === 'tab1'">
         <div class="IndexArchive__inner">
           <h2 class="Index__title">EVENT</h2>
           <ul class="IndexArchive__list">
@@ -339,20 +295,14 @@
       <section v-else-if="isActive === 'tab4'" style="height: 431px;"></section>
     </div><!-- menuNav -->
 
-
-
-
-
-
     <footer class="footer">
       <div class="footer__inner">
         <nav class="footer__menu">
           <ul class="footer__list--menu">
             <li class="footer__item--menu"><a href="index.html">TOP</a></li>
             <li class="footer__item--menu"><a href="menu.html">MENU</a></li>
-            <li class="footer__item--menu"><a href="#">CAST</a></li>
-            <li class="footer__item--menu"><a href="#">CONTACT</a></li>
-            <li class="footer__item--menu"><a href="#">ACCESS</a></li>
+            <li class="footer__item--menu"><a href="about.html">ABOUT</a></li>
+            <li class="footer__item--menu"><a href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
         <div class="footer__banner">
@@ -376,9 +326,9 @@
                 <img src="./images/rectangle.png" alt="">
               </figure>
               <p class="footer__title--banner">デリバリーサービスはこちらから</p>
-              <ul class="app-button">
+              <div class="app-button">
                 <button class="btn slide-bg">今すぐ注文する</button>
-              </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -394,5 +344,4 @@
   <script src="./scripts/libs/swiper.js"></script>
   <script src="./scripts/libs/vue.js"></script>
 </body>
-
 </html>

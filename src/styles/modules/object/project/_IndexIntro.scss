@@ -3,19 +3,25 @@
     @include flex($justify:center,$align:center);
     padding: 30px 5px;
     flex-direction: column;
+    flex-wrap: wrap;
     @extend .l-content__width;
-    @include breakpoint-up(phone) {
+    @include breakpoint-up(tab-port) {
       flex-direction: row;
       padding: 120px 20px 50px; 
     }
   }
 
   &__foot {
-    margin-right: 6%;
-    flex: 1;
+    width: 80%;
+    margin-right: 0;
+    @include breakpoint-up(tab-port) {
+      margin-right: 6%;
+      flex: 1;
+    }
   }
 
   &__img {
+    height: 100%;
     position: relative;
     overflow: hidden;
     img {
@@ -26,14 +32,15 @@
       padding-bottom: 90%;
       img {
         @include absCenter;
+        @include of($of_width:100%,$of_height:100%);
       }
     }
   }
 
   &__head {
-    
+    margin-top: 30px;
     width: 100%;
-    @include breakpoint-up(phone) {
+    @include breakpoint-up(tab-port) {
       width: 40%;
     }
   }
@@ -54,16 +61,17 @@
     font-size: 2.6rem;
     line-height: 1.4;
     margin: 0 0 30px 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -160px;
-      width: 150px;
-      height: 2px;
-      background: $cBgBlack;
-      transform-origin: right;
+    @include breakpoint-up(tab-port) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -160px;
+        width: 150px;
+        height: 2px;
+        background: $cBgBlack;
+        transform-origin: right;
+      }
     }
   }
 

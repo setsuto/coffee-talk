@@ -1,38 +1,32 @@
 "use strict";
 
-var slide1 = new Swiper('#heroSlider', {
+var slide1 = new Swiper('#aboutSlider1', {
   // initialSlide: 1,
   loop: true,
   grabCursor: true,
   effect: 'fade',
-  centeredSlides: true,
+  // centeredSlides: true,
   slidesPerView: 1,
-  // spaceBetween: 60,
   speed: 1000,
-  breakpoints: {
-    1024: {
-      slidesPerView: 1
-    }
-  },
   autoplay: {
-    delay: 6000
+    delay: 4000
   }
 });
-var slide2 = new Swiper('#top-memberSlider', {
+var slide2 = new Swiper('#featureSlider', {
   // initialSlide: 1,
   // centeredSlides: true,
   loop: true,
   grabCursor: true,
   effect: 'slide',
-  slidesPerView: 1,
-  spaceBetween: 10,
+  slidesPerView: 2,
+  spaceBetween: 20,
   speed: 1000,
   breakpoints: {
     600: {
-      slidesPerView: 2
+      slidesPerView: 3
     },
     1000: {
-      slidesPerView: 2
+      slidesPerView: 4
     }
   },
   autoplay: {

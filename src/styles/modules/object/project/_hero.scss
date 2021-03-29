@@ -1,61 +1,86 @@
 .hero {
-    padding-top: 80px;
+    padding-top: 60px;
+
+    @include breakpoint-up(tab-port) {
+        padding-top: 80px;
+    }
+
     overflow: hidden;
+
     &__inner {
         position: relative;
-        height: calc(100vh - 80px);
-    }
+        height: 500px;
 
-    .swiper-container {
-        overflow: visible !important;
-        position: relative;
-
-    }
-
-    .swiper-slide {
-        box-shadow: $shadow-1;
-        height: calc(100vh - 80px);
-        width: 100%;
-        overflow: hidden;
-
-        img {
-            @include of($of_width:100%,$of_height:100%);
+        @include breakpoint-up(tab-port) {
+            height: calc(100vh - 80px);
+        }
+        &::after {
+            content: "";
+            @include absCenter;
+            z-index: 1;
+            display: block;
+            max-width: 600px;
+            width: 600px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.8);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         }
     }
 
     &__img {
-        max-width: 150px;
+        max-width: 200px;
+        width: 200px;
         margin: 0 auto;
-        overflow: hidden;
-        position: relative;
-        padding-bottom: 12%;
+
         img {
-            @include absCenter;
-            @include of($of_width:100%,$of_height:100%);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
     }
 
-    &__txt {
-        font-weight: bold;
-        padding: 50px;
-        background: rgba(255, 255, 255, 0.8);
-        color: $cBlack;
+    &__box {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
         text-align: center;
-        border: 1px solid $cGray-2;
-        outline: 2px solid $cGray-2;
-        outline-offset: 4px;
-        border-radius: 6px;
-        p {
-            margin-top: 10px;
-            font-size: 1.6rem;
-            letter-spacing: 0.1em;
-            font-weight: 500;
-            padding: 20px 10px;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+        @include breakpoint-up(phone) {
+            font-size: 6rem;
+        }
+
+        span {
+            position: relative;
+            z-index: 2;
+            color: $cWhite;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                transform: scale(1.07, 1.05) skewX(-25deg);
+                background: $cBlack;
+            }
+        }
+    }
+
+    &__txt {
+        font-size: 2rem;
+        margin-top: 30px;
+        font-weight: 500;
+        @include breakpoint-up(phone) {
+            font-size: 3rem;
         }
     }
 }
