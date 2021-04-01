@@ -1,4 +1,4 @@
-.p-mobile {
+.mobile {
   &__menu {
     display: block;
 
@@ -70,7 +70,7 @@
     &::after {
       width: 30px;
       height: 1px;
-      background: $cBlack;
+      background: $cWhite;
       display: inline-block;
     }
 
