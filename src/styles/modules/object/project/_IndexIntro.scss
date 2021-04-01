@@ -3,19 +3,25 @@
     @include flex($justify:center,$align:center);
     padding: 30px 5px;
     flex-direction: column;
+    flex-wrap: wrap;
     @extend .l-content__width;
-    @include breakpoint-up(phone) {
+    @include breakpoint-up(tab-port) {
       flex-direction: row;
       padding: 120px 20px 50px; 
     }
   }
 
   &__foot {
-    margin-right: 6%;
-    flex: 1;
+    width: 80%;
+    margin-right: 0;
+    @include breakpoint-up(tab-port) {
+      margin-right: 6%;
+      flex: 1;
+    }
   }
 
   &__img {
+    height: 100%;
     position: relative;
     overflow: hidden;
     img {
@@ -26,21 +32,21 @@
       padding-bottom: 90%;
       img {
         @include absCenter;
+        @include of($of_width:100%,$of_height:100%);
       }
     }
   }
 
   &__head {
-    
+    margin-top: 30px;
     width: 100%;
-    @include breakpoint-up(phone) {
+    @include breakpoint-up(tab-port) {
       width: 40%;
     }
   }
 
   &__headCaption {
     text-align: center;
-    color: $cRed-1;
     font-style: italic;
     font-family: serif;
     letter-spacing: 1px;
@@ -55,16 +61,17 @@
     font-size: 2.6rem;
     line-height: 1.4;
     margin: 0 0 30px 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -160px;
-      width: 150px;
-      height: 2px;
-      background: $cBgBlack;
-      transform-origin: right;
+    @include breakpoint-up(tab-port) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -160px;
+        width: 150px;
+        height: 2px;
+        background: $cBgBlack;
+        transform-origin: right;
+      }
     }
   }
 
@@ -73,7 +80,7 @@
     margin: 0 auto;
     @include flex($justify:center,$align:center);
     background: $cBgGray;
-    padding: 20px 0 40px 0;
+    padding: 10px 0 40px 0;
     border-radius: 40px;
     .IndexIntro__item:nth-child(1)::before {
       content: "wifi完備";
@@ -96,17 +103,18 @@
   }
 
   &__item {
-    padding: 0 5px;
+    padding: 0 10px;
     position: relative;
 
     &::before {
       text-align: center;
       position: absolute;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       right: 0;
       left: 0;
       bottom: -30px;
       color: $cWhite;
+      border-radius: 30px;
     }
   }
   &__txt {

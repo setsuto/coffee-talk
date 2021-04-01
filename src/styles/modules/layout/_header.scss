@@ -11,6 +11,10 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    @include breakpoint-down(tab-port) {
+      justify-content: space-between;
+      padding: 0 10px;
+    }
   }
 
   &__logo {
@@ -40,7 +44,7 @@
 
   &__item {
     position: relative;
-    flex-basis: calc(100% / 5);
+    flex-basis: calc(100% / 4);
     display: flex;
     align-items: center;
     justify-content: center;
