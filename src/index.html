@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="/src/images/about_icon_2.svg">
-  <title>COFFEE-TALK</title>
+  <title>TNBLOG</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
   <link rel='stylesheet'
     href="https://fonts.googleapis.com/css2?family=Poppins%3Awght%40400%3B500%3B700&#038;display=swap">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap">
   <link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
@@ -18,349 +18,189 @@
 </head>
 
 <body>
-  <div id="app">
-    <header class="header header--Index">
-      <div class="header__inner">
-        <h1 class="header__logo">
-          <a href="index.html"><img src="./images/logo.png" alt=""></a>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <!-- <svg class="icon icon-bin">
+            <use xlink:href="images/sprite.svg#icon-github">
+            </use>
+          </svg> -->
+      </div>
+      <div class="header__content">
+        <h1 class="header__title">
+          TANA<span class="hightlight">BLOG</span>
         </h1>
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="index.html">TOP</a></li>
-            <li class="header__item"><a class="header__link" href="menu.html">MENU</a></li>
-            <li class="header__item"><a class="header__link" href="about.html">ABOUT</a></li>
-            <li class="header__item"><a class="header__link" href="contact.html">CONTACT</a></li>
-          </ul>
-        </nav>
-        <div class="mobile__menu">
-          <input type="checkbox" id="mobile-toggle" class="mobile__trigger">
-          <label for="mobile-toggle" class="mobile__btn"><span class="mobile__icon">&nbsp;</span></label>
-          <nav class="mobile__contents">
-            <ul class="mobile__list">
-              <li class="mobile__item">
-                <a href="index.html" class="mobile__link">TOP</a>
-              </li>
-              <li class="mobile__item">
-                <a href="menu.html" class="mobile__link">MENU</a>
-              </li>
-              <li class="mobile__item">
-                <a href="about.html" class="mobile__link">ABOUT</a>
-              </li>
-              <li class="mobile__item">
-                <a href="contact.html" class="mobile__link">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <p class="header__txt">プログラミング学習や趣味についてのへちま起稿</p>
       </div>
-    </header>
+      <button type="button" class="drawer__button js-openDrawer" aria-controls="drawer" aria-expanded="false">
+        <svg class="icon icon-bin">
+          <use xlink:href="images/sprite.svg#icon-github">
+          </use>
+        </svg>
+      </button>
+    </div>
 
-    <section class="hero">
-      <div class="hero__inner">
-        <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
-            <source src="./images/video.mp4" type="video/mp4">
-            <source src="./images/video.webm" type="video/webm">
-          </video>
-        </div>
-        <div class="hero__box">
-          <h2 class="hero__title">COFFEE&nbsp;<span>TALK</span></h2>
-          <p class="hero__txt">1杯のあたたかいコーヒーを提供する癒やしのカフェです。</p>
-        </div>
-      </div>
-    </section>
+  </header>
 
-    <section class="IndexIntro">
-      <div class="IndexIntro__inner">
-        <div class="IndexIntro__foot">
-          <figure class="IndexIntro__img IndexIntro__img--foot">
-            <img src="./images/intro_1.jpg" alt="">
-          </figure>
-        </div>
-        <div class="IndexIntro__head">
-          <p class="IndexIntro__headCaption">
-            Makes me feel comfortable.
-          </p>
-          <h2 class="IndexIntro__headTitle">
-            1杯のあたたかいコーヒーを提供する癒やしのカフェです。
-          </h2>
-          <ul class="IndexIntro__list">
-            <li class="IndexIntro__item">
-              <figure class="IndexIntro__img">
-                <img src="./images/wifi.png" alt="">
-              </figure>
-            </li>
-            <li class="IndexIntro__item">
-              <figure class="IndexIntro__img">
-                <img src="./images/smoke.png" alt="">
-              </figure>
-            </li>
-            <li class="IndexIntro__item">
-              <figure class="IndexIntro__img">
-                <img src="./images/take.png" alt="">
-              </figure>
-            </li>
-          </ul>
-          <p class="IndexIntro__txt">
-            CoffeeTalkは、人々の悩みを聞きながら、手持ちの材料を用いてその人達の心を癒す暖かい飲み物を提供するカフェです。
-          </p>
-          <a href="about.html" class="u-mt30" style="display: block;">
-            <button class="btn slide-bg">当店について</button>
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <div class="menuNav">
-      <div class="menuNav__inner u-mt50 l-content__width">
-        <ul class="menuNav__list">
-          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab1')"
-            v-bind:class="{'active': isActive === 'tab1'}">
-            <p class="menuNav__title">
-              <span>イベント告知</span>
-            </p>
-          </li>
-          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab2')"
-            v-bind:class="{'active': isActive === 'tab2'}">
-            <p class="menuNav__title">
-              <span>スタッフ情報</span>
-            </p>
-          </li>
-          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab3')"
-            v-bind:class="{'active': isActive === 'tab3'}">
-            <p class="menuNav__title">
-              <span>お知らせ</span>
-            </p>
-          </li>
-          <li class="menuNav__item menuNav__item--Index" v-on:click="change('tab4')"
-            v-bind:class="{'active': isActive === 'tab4'}">
-            <p class="menuNav__title">
-              <span></span>
-            </p>
-          </li>
-        </ul>
-      </div><!-- menuNav__inner -->
-
-      <section class="IndexNews" v-if="isActive === 'tab3'">
-        <div class="IndexNews__inner">
-          <h2 class="Index__title">
-            NEWS / <span>PICK UP</span>
-          </h2>
-          <ul class="IndexNews__list">
-            <li class="IndexNews__item">
-              <p class="IndexNews__date">2021.01.01</p>
-              <p class="IndexNews__txt">
-                <a href="#">
-                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
-                </a>
-              </p>
-              <i></i>
-            </li>
-            <li class="IndexNews__item">
-              <p class="IndexNews__date">2021.01.01</p>
-              <p class="IndexNews__txt">
-                <a href="#">
-                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
-                </a>
-              </p>
-              <i></i>
-            </li>
-            <li class="IndexNews__item">
-              <p class="IndexNews__date">2021.01.01</p>
-              <p class="IndexNews__txt">
-                <a href="#">
-                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
-                </a>
-              </p>
-              <i></i>
-            </li>
-            <li class="IndexNews__item">
-              <p class="IndexNews__date">2021.01.01</p>
-              <p class="IndexNews__txt">
-                <a href="#">
-                  <span>LINEアカウントを通じた不正メッセージに関する注意喚起</span>
-                </a>
-              </p>
-              <i></i>
-            </li>
-          </ul>
-          <nav>
-            <ul class="IndexNews__list--pager">
-              <li class="nav__item--pagerNum">
-                <a href="">1</a>
-              </li>
-              <li class="nav__item--pagerNum">
-                <a href="">2</a>
-              </li>
-              <li class="nav__item--pagerNum">
-                <a href="">3</a>
-              </li>
-              <li class="nav__item--pagerNum">
-                <a href="">4</a>
-              </li>
-              <li class="nav__item--pagerNum">
-                <a href="">5</a>
-              </li>
-              <li class="nav__item--pagerNext">
-                <a href=""></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-      <section class="IndexStaff" v-else-if="isActive === 'tab2'">
-        <div class="IndexStaff__inner">
-          <div class="IndexStaff__head">
-            <h2 class="Index__title">
-              TODAY'S STAFF
-            </h2>
-            <ul class="IndexStaff__list IndexStaff__list--today">
-              <li class="IndexStaff__item IndexStaff__item--today">
-                <figure class="IndexStaff__img IndexStaff__img--today">
-                  <img src="./images/tetuya.png" alt="">
-                </figure>
-                <div class="IndexStaff__details">
-                  <h4 class="INdexStaff__name">TETUYA -テツヤ-</h4>
-                  <p class="IndexStaff__txt">
-                    好きなスポーツ：アメフト<br>
-                    趣味：岩盤浴<br>
-                    一言：日本語勉強中です。
-                  </p>
-                </div>
-              </li>
-              <li class="IndexStaff__item IndexStaff__item--today">
-                <figure class="IndexStaff__img IndexStaff__img--today">
-                  <img src="./images/bob.png" alt="">
-                </figure>
-                <div class="IndexStaff__details">
-                  <h4 class="INdexStaff__name">KENJI -ケンヂ-</h4>
-                  <p class="IndexStaff__txt">
-                    好きなスポーツ：プロレス<br>
-                    趣味：サウナ<br>
-                    一言：やることなすこと桁外れです。
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="IndexStaff__foot">
-            <h2 class="Index__title">
-              staff blog
-            </h2>
-            <ul class="IndexStaff__list IndexStaff__list--blog">
-              <li class="IndexStaff__item IndexStaff__item--blog">
-                <a href="#">
-                  <figure class="IndexStaff__img IndexStaff__img--blog">
-                    <img src="./images/hero_3.jpg" alt="">
-                  </figure>
-                  <p class="IndexStaff__tag u-mt10">2020.05/12</p>
-                  <p class="IndexStaff__txt u-mt10">
-                    テツさんたちと一緒にサウナ。
-                  </p>
-                </a>
-              </li>
-              <li class="IndexStaff__item IndexStaff__item--blog">
-                <a href="#">
-                  <figure class="IndexStaff__img IndexStaff__img--blog">
-                    <img src="./images/hero_3.jpg" alt="">
-                  </figure>
-                  <p class="IndexStaff__tag u-mt10">2020.05/12</p>
-                  <p class="IndexStaff__txt u-mt10">
-                    テツさんたちと一緒にサウナ。
-                  </p>
-                </a>
-              </li>
-              <li class="IndexStaff__item IndexStaff__item--blog">
-                <a href="#">
-                  <figure class="IndexStaff__img IndexStaff__img--blog">
-                    <img src="./images/hero_3.jpg" alt="">
-                  </figure>
-                  <p class="IndexStaff__tag u-mt10">2020.05/12</p>
-                  <p class="IndexStaff__txt u-mt10">
-                    テツさんたちと一緒にサウナ。
-                  </p>
-                </a>
-              </li>
-              <li class="IndexStaff__item IndexStaff__item--blog u-text-cent">
-                <a href="#" class="view-btn">all view</a>
-              </li>
-            </ul>
-          </div>
-        </div><!-- IndexStaff__inner -->
-      </section>
-      <section class="IndexArchive" v-else-if="isActive === 'tab1'">
-        <div class="IndexArchive__inner">
-          <h2 class="Index__title">EVENT</h2>
-          <ul class="IndexArchive__list">
-            <li class="IndexArchive__item" v-for="article in articles">
-              <figure class="IndexArchive__img">
-                <img v-bind:src="article.thumbnail" alt="">
-              </figure>
-              <div class="IndexArchive__details">
-                <a href="#">
-                  <p>プレスリリース</p>
-                  <h3 class="IndexArchive__title">{{ article.txt }}</h3>
-                  <p class="IndexArchive__date">{{ article.date }}</p>
-                </a>
-              </div>
-            </li>
-          </ul>
-          <div class="u-text-center">
-            <button class="btn slide-bg" v-on:click="load" v-if="hasNext">もっと見る</button>
-          </div>
-        </div>
-      </section>
-      <section v-else-if="isActive === 'tab4'" style="height: 431px;"></section>
-    </div><!-- menuNav -->
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <nav class="footer__menu">
-          <ul class="footer__list--menu">
-            <li class="footer__item--menu"><a href="index.html">TOP</a></li>
-            <li class="footer__item--menu"><a href="menu.html">MENU</a></li>
-            <li class="footer__item--menu"><a href="about.html">ABOUT</a></li>
-            <li class="footer__item--menu"><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </nav>
-        <div class="footer__banner">
-          <ul class="footer__list--banner">
-            <li class="footer__item--banner">
-              <figure>
-                <img src="./images/logo.png" alt="">
-              </figure>
-              <p class="footer__title--banner">最新情報やクーポンをアプリで配信中</p>
-              <ul class="app-button">
-                <li class="app-button__appstore">
-                  <a href="#"><img src="./images/apple.png" alt=""></a>
-                </li>
-                <li class="app-button__googleplay">
-                  <a href="#"><img src="./images/google.png" alt=""></a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__item--banner">
-              <figure>
-                <img src="./images/rectangle.png" alt="">
-              </figure>
-              <p class="footer__title--banner">デリバリーサービスはこちらから</p>
-              <div class="app-button">
-                <button class="btn slide-bg">今すぐ注文する</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <p class="u-text-center u-mt60">©&nbsp;l2021&nbsp;lS.TANABE</p>
-    </footer>
+  <div id="drawer" class="drawer js-drawer" aria-expanded="false">
+    <div class="drawer__backdrop js-backdrop"></div>
+    <nav class="drawer__nav Nav">
+      <button type="button" class="drawer__button js-closeDrawer" aria-controls="drawer" aria-expanded="false">
+        <svg class="icon icon-bin">
+          <use xlink:href="images/sprite.svg#icon-github">
+          </use>
+        </svg>
+      </button>
+      <ul class="drawer__list">
+        <li class="drawer__item">
+          <a href="#" class="Nav-link">アイテム 1</a>
+        </li>
+        <li class="drawer__item">
+          <a href="#" class="Nav-link">アイテム 1</a>
+        </li>
+        <li class="drawer__item">
+          <a href="#" class="Nav-link">アイテム 1</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-  <script src="https://kit.fontawesome.com/b8a7fea4d4.js"></script>
+
+  <main class="content">
+    <div class="content__inner">
+      <div class="content__left">
+
+        <div class="tab">
+          <ul class="tab__list">
+            <li class="tab__item"><a href="#" class="active tab__link" data-id="tab__data1">最新</a></li>
+            <li class="tab__item"><a href="#" class="tab__link" data-id="tab__data2">プログラミング</a></li>
+            <li class="tab__item"><a href="#" class="tab__link" data-id="tab__data3">趣味</a></li>
+          </ul>
+
+          <section class="post tab__content active" id="tab__data1">
+            <div class="post__inner">
+              <ul class="post__list">
+                <li class="post__item">
+                  <article class="post__article">
+                    <div class="post__articleInner">
+                      <div class="post__img">
+                        <a href="#">
+                          <figure class="post__imgInner">
+                            <img src="./images/article_1.jpg" alt="">
+                          </figure>
+                        </a>
+                      </div>
+                      <div class="post__details">
+                        <div class="post__detailsInner">
+                          <ul class="post__list--details">
+                            <li class="post__item--details">
+                              <ul class="post__list--category">
+                                <li class="post__item--category">
+                                  <a href="#">TAG</a>
+                                </li>
+                                <li class="post__item--category">
+                                  <a href="#">TAG</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="post__item--meta">
+                              <time class="post__data">2021.02.14</time>
+                            </li>
+                          </ul>
+                          <p class="post__txt">
+                            ECサイトやコーポレートサイトでよく見かける、カルーセル...
+                          </p>
+                          <button class="btn slide-bg">
+                            <a href="#">read more</a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="post__item">
+                  <article class="post__article">
+                    <div class="post__articleInner">
+                      <div class="post__img">
+                        <a href="#">
+                          <figure class="post__imgInner">
+                            <img src="./images/article_1.jpg" alt="">
+                          </figure>
+                        </a>
+                      </div>
+                      <div class="post__details">
+                        <div class="post__detailsInner">
+                          <ul class="post__list--details">
+                            <li class="post__item--details">
+                              <ul class="post__list--category">
+                                <li class="post__item--category">
+                                  <a href="#">TAG</a>
+                                </li>
+                                <li class="post__item--category">
+                                  <a href="#">TAG</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="post__item--meta">
+                              <time class="post__data">2021.02.14</time>
+                            </li>
+                          </ul>
+                          <p class="post__txt">
+                            ECサイトやコーポレートサイトでよく見かける、カルーセル...
+                          </p>
+                          <button class="btn slide-bg">
+                            <a href="#">read more</a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="todo tab__content" id="tab__data2">
+          </section>
+
+          <section class="tab__content" id="tab__data3">
+          </section>
+
+        </div>
+      </div>
+
+
+
+      <div class="content__right">
+        <section class="tagGroup">
+          <div class="tabGroup__inner">
+            <h2 class="sectionHeading">タグで絞り込む</h2>
+            <ul class="tagGroup__list">
+              <li class="tagGroup__item"><a href="#" class="active tab__link">PHP</a></li>
+              <li class="tagGroup__item"><a href="#" class="tab__link">Laravel</a></li>
+              <li class="tagGroup__item"><a href="#" class="tab__link">本</a></li>
+              <li class="tagGroup__item"><a href="#" class="tab__link">ゲーム</a></li>
+              <li class="tagGroup__item"><a href="#" class="tab__link">docker</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
   <script src="./scripts/vendors/swiper.min.js"></script>
   <script src="./scripts/libs/swiper.js"></script>
-  <script src="./scripts/libs/vue.js"></script>
+  <script src="./scripts/libs/drawer.js"></script>
+  <script src="./scripts/libs/tab.js"></script>
 </body>
+
 </html>

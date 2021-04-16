@@ -1,90 +1,18 @@
-.Index__title {
-  // display: inline-block;
-  position: relative;
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 1.35px;
-  text-transform: uppercase;
-}
-
-.Index__txt {
-  display: inline-block;
-  margin: 5px 0 50px 0;
-  font-size: 1.6rem;
-}
-
-
-.section--topTitle {
-  position: relative;
-  height: 300px;
-  margin: 0 0 100px;
-  background-size: cover;
-  color: $cWhite;
-  &--about {
-    background-image: linear-gradient(to right bottom, rgba(41,152,255,0.5), rgba(100,152,255,0.5)),url(../images/header_2.jpg);
-    background-position: center;
-  }
-  &--contact {
-    background-image: linear-gradient(to right bottom, rgba(126,213,111,0.5), rgba(40,180,133,0.5)),url(../images/hero_2.jpg);
-    background-position: center;
-  }
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $cGray-2;
   h2 {
-    position: relative;
-    font-weight: normal;
-    font-size: 5rem;
-    overflow: hidden;
-    padding: 100px 16px 1px;
-    @include breakpoint-up(tab-land) {
-      padding: 0;
-      text-align: center;
-      top: 100px;
-      width: 1200px;
-      margin: 0 auto;
-    }
+    font-size: 2.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
   p {
-    padding: 0 20px;
-    @include breakpoint-up(tab-land) {
-      margin: 0 auto;
-      position: relative;
-      text-align: center;
-      top: 110px;
-      width: 1200px;
-    }
-  }
-}
-
-
-.section-subHeading {
-  position: relative;
-  color: $cWhite;
-  font-size: 2rem;
-  line-height: 30px;
-  text-align: center;
-  &--food::before {
-    content: '\f805';
-    font-size: 3rem;
-    font-family: 'Font Awesome 5 Pro';
-    margin: 10px;
-    color: $cOrange;
-  }
-  &--food::after {
-    content: 'フードメニュー';
-    font-size: 1.6rem;
-    padding-top: .8rem;
-    display: block
-  }
-  &--drink::before {
-    content: '\f7b6';
-    font-size: 3rem;
-    font-family: 'Font Awesome 5 Pro';
-    margin: 10px;
-    color: $cWhite;
-  }
-  &--drink::after {
-    content: 'ドリンクメニュー';
-    font-size: 1.6rem;
-    padding-top: .8rem;
-    display: block
+    font-size: 1.4rem;
+    padding-left: 12px;
   }
 }

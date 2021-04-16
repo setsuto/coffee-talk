@@ -1,6 +1,28 @@
 
 
+.content {
+  position: relative;
+  // z-index: -3;
+  &__inner {
+    @extend .l-content__width;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__left {
+    position: relative;
+    height: 100vh;
+    padding: 3rem 0;
+    // margin-top: -2.8rem;
+    width: 68%;
+    margin-right: 4%;
+    // background: $cWhite;
+  }
+
+  &__right {
+    flex: 1;
+  }
+}
 
 
 
